@@ -70,7 +70,7 @@ h3{
     text-decoration: none;
     color: #B2B7BF;
     background-color: #293A52;
-    padding: 5px;
+    padding: 8px;
     border-radius: 3px;
     transition: .3s;
 
@@ -79,7 +79,7 @@ h3{
 .nav:hover{
     background-color: #94989c;
     color: #1f2020;
-    padding: 6px;
+    padding: 9px;
 }
 
 .icone-lista{
