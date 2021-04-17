@@ -1,131 +1,158 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background: #B2B7BF;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    font-size: 16px;
 }
 
-.perfil{
-    background-color: #B1BAC7;
-    margin: auto;
-    padding: 25px;
-    width: 500px;
+
+.front-page{
+    height: 1400px;
+    background-image: url(page1.jpg);
+    background-size: cover;
+}
+
+.nav{
+    position: fixed;
     text-align: center;
+    color: #3e3d41c2;
+    font-size: 25px;
+    margin-top: 20px;
+    transition: .3s;
+    width: 150px;
+    padding: 5px;
     border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.705);
-    color: #2e2f30;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    font-size: 17px;
+    top: 20px;
+    background-color: #afadb946;
 }
 
-h1{
-    font-size: 28px;
+.about-nav{
+    left: 30%;
 }
 
-.skills{
-    color: #B2B7BF;
+.skills-nav{
+    left: 50%;
+}
+
+.contact-nav{
+    left: 70%;
+}
+
+.nav:hover{
+    color: #DBDAEA;
+    background-color: #857E61;
+}
+
+.nav-menu{
+    display: inline;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.home{
+    position: fixed;
+    left: 3%;
+    top: 3%;
+    font-size: 35px;
+    transition: .3s;
+    color: #dbdaea79;
+    background-color: none;
+}
+
+.home:hover{
+    color: #DBDAEA
+}
+
+.header{
     margin: auto;
-    width: 400px;
-    background-color: #565759;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.705);
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 40px;
+    text-align: center;
 }
 
-h3{
-    color: #252525;
-    text-align: center;
-    font-size: 24px;
+.titulo{
+    
+    font-size: 8em;
+    position: absolute;
+    top: 50%;
+    left: 25%;
 }
 
 .img{
     border-radius: 50%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #293A52;
+    position: absolute;
+    right: 25%;
+    top: 25%;
 }
 
-
-.lista{
-    list-style-type: none;
-    line-height: 1.8;
-    font-size: 18px;
-    
+.arrow{
+    position: absolute;
+    font-size: 80px;
+    top: 87%;
+    left: 50%;
 }
 
-.header{
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.nome{
-    font-size: 40px;
-    text-align: center;
-    
-}
-.nav{
-    text-decoration: none;
-    color: #B2B7BF;
-    background-color: #293A52;
-    padding: 8px;
-    border-radius: 3px;
+.arrow-icon{
+    color: #dbdaea79;
     transition: .3s;
-
 }
 
-.nav:hover{
-    background-color: #94989c;
-    color: #1f2020;
-    padding: 9px;
+.arrow-icon:hover{
+    color: #dbdaea;
 }
 
-.icone-lista{
-    font-size: 22px;
-    transition: .2s;
-    color: #252525;
+/* ---------------second page------------------ */
+
+.second-page{
+    height: 1400px;
+    background-image: url(teclado-minimalista.jpg);
+    background-size: cover;
+    color: rgb(51, 51, 51);
 }
 
-.icone-lista:hover{
-    font-size: 29px;
-    color: #293A52;
-    
+.arrow2{
+    position: absolute;
+    font-size: 80px;
+    top: 230%;
+    left: 50%;
+}
+
+.arrow-icon2{
+    color: #70707979;
+    transition: .3s;
+}
+
+.description{
+    position: absolute;
+    text-align: right;
+    top: 200%;
+    right: 10%;
+    width: 900px;
+    font-size: 40px;
+}
+
+.i-am{
+    position: absolute;
+    left: 10%;
+    top: 160%;
+    font-size: 50px;
+    width: 700px;
+    font-weight: 600;
 }
 
 .trybe{
-    color: #293A52;
-    text-decoration: none;
+    color: #857E61;
 }
 
 .trybe:hover{
     text-decoration: underline;
 }
 
-.redes{
-    text-align: center;
-    font-size: 2.5em;
+/* ------------ third page------------- */
 
-}
-
-.icones-redes{
-    color: #252525;
-    transition: .4s;
-}
-
-.icones-redes:hover{
-    color: #293A52;
-}
-
-.easter-egg{
-    overflow: hidden;
-    height: 31px;
-    transition: .5s;
-}
-
-.easter-egg:active{
-    height: 100px;
-}
