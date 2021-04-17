@@ -15,56 +15,52 @@ body{
 
 
 .front-page{
-    height: 1400px;
+    height: 110vh;
+    width: 100vw;
     background-image: url(page1.jpg);
     background-size: cover;
+    transition: .3s;
 }
 
 .nav{
-    position: fixed;
+    position: absolute;
     text-align: center;
     color: #252527c2;
-    font-size: 25px;
-    margin-top: 20px;
+    font-size: 1.5em;
+    margin-top: 1vh;
     transition: .3s;
-    width: 150px;
+    width: 10vw;
     padding: 5px;
     border-radius: 5px;
-    top: 20px;
-    background-color: #afadb94d;
+    top: 2vh;
+    z-index: 4;
 }
 
 .about-nav{
-    left: 29%;
+    left: 29vw;
 }
 
 .skills-nav{
-    left: 49%;
+    left: 49vw;
 }
 
 .contact-nav{
-    left: 70%;
+    left: 70vw;
 }
 
 .nav:hover{
-    color: #DBDAEA;
-    background-color: #857E61;
-}
-
-.nav-menu{
-    display: inline;
-    list-style: none;
-    margin-left: 20px;
+    color: #e2e2e2;
 }
 
 .home{
     position: fixed;
-    left: 3%;
-    top: 3%;
-    font-size: 35px;
+    left: 3vw;
+    top: 3vh;
+    font-size: 2.2em;
     transition: .3s;
     color: #a8a7b179;
     background-color: none;
+    z-index: 4;
 }
 
 .home:hover{
@@ -72,31 +68,39 @@ body{
 }
 
 .header{
-    margin: auto;
+    position: fixed;
+    width: 100vw;
     text-align: center;
+    background-color: #afadb94d;
+    height: 10vh;
+    z-index: 3;
 }
 
 .titulo{
     
     font-size: 8em;
     position: absolute;
-    top: 50%;
-    left: 25%;
+    top: 50vh;
+    left: 20vw;
     color: rgb(14, 14, 14);
+    z-index: 2;
 }
 
 .img{
     border-radius: 50%;
+    max-width: 20vw;
+    min-width: 250px;
     position: absolute;
-    right: 25%;
-    top: 25%;
+    right: 25vw;
+    top: 25vh;
+    z-index: 1;
 }
 
 .arrow{
     position: absolute;
-    font-size: 80px;
-    top: 87%;
-    left: 50%;
+    font-size: 5em;
+    top: 90vh;
+    right: 50vw;
 }
 
 .arrow-icon{
@@ -111,7 +115,8 @@ body{
 /* ---------------second page------------------ */
 
 .second-page{
-    height: 1400px;
+    height: 110vh;
+    width: 100vw;
     background-image: url(teclado-minimalista.jpg);
     background-size: cover;
     color: rgb(51, 51, 51);
@@ -119,9 +124,9 @@ body{
 
 .arrow2{
     position: absolute;
-    font-size: 80px;
-    top: 230%;
-    left: 50%;
+    font-size: 5em;
+    top: 200vh;
+    right: 50vw;
 }
 
 .arrow-icon2{
@@ -129,21 +134,27 @@ body{
     transition: .3s;
 }
 
+.arrow-icon2:hover{
+    color: #c9c9c9ce;
+}
+
 .description{
     position: absolute;
     text-align: right;
-    top: 200%;
-    right: 10%;
-    width: 900px;
-    font-size: 40px;
+    min-width: 400px;
+    max-width: 1000px;
+    top: 165vh;
+    max-height: 5vh;
+    right: 10vw;
+    font-size: 2em;
 }
 
 .i-am{
     position: absolute;
     left: 10%;
-    top: 160%;
-    font-size: 50px;
-    width: 700px;
+    top: 120vh;
+    font-size: 2.7em;
+    max-width: 700px;
     font-weight: 600;
 }
 
@@ -158,7 +169,8 @@ body{
 /* ------------ third page------------- */
 
 .third-page{
-    height: 1400px;
+    height: 120vh;
+    width: 100vw;
     background-image: url(lampada.jpg);
     background-size: cover;
     background-position: 20vw;
@@ -166,64 +178,63 @@ body{
 }
 
 .third-page h3{
-    font-size: 30px;
+    font-size: 2em;
 
 }
 .lista{
     list-style: none;
-    font-size: 25px;
+    font-size: 1.5em;
     
 }
 
 .skills-known{
     width: 400px;
     position: absolute;
-    left: 10%;
-    top: 300%;
+    left: 10vw;
+    top: 230vh;
     color: #818186;
 }
 
 .skills-unknown{
     width: 400px;
     position: absolute;
-    left: 10%;
-    top: 350%;
+    left: 10vw;
+    top: 280vh;
     color: #818186;
 }
 
 .icone-lista{
-    font-size: 30px;
-    transition: .2s;
+    font-size: 1.5em;
+    transition: .3s;
 }
 
 .icone-lista:hover{
-    font-size: 39px;
-    color: #d1d1da;
+    font-size: 1.9em;
+    color: #fdfdff;
 }
 
 .contato{
     position: absolute;
-    right: 10%;
-    top: 400%;
+    right: 10vw;
+    top: 320vh;
     color: #818186;
-    line-height: 70px;
 }
 
 .icones-redes{
-    font-size: 50px;
+    font-size: 3.4em;
     color: #818186;
     transition: .3s;
     margin-left: 18px;
 }
 
 .icones-redes:hover{
-    color: #d1d1da;
+    color: #fdfdff;
 }
 
 .footer{
-    left: 50%;
+    left: 50vw;
     text-align: center;
     position: absolute;
-    top: 420%;
+    top: 335vh;
     color: #818186;
 }
