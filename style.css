@@ -1,231 +1,136 @@
-*{
-    margin: 0;
-    text-decoration: none;
-    padding: 0;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    background: #B2B7BF;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
-
-.front-page{
-    height: 1400px;
-    background-image: url(page1.jpg);
-    background-size: cover;
-}
-
-.nav{
-    position: fixed;
-    text-align: center;
-    color: #252527c2;
-    font-size: 25px;
-    margin-top: 20px;
-    transition: .3s;
-    width: 150px;
-    padding: 5px;
-    border-radius: 5px;
-    top: 20px;
-    background-color: #afadb94d;
-}
-
-.about-nav{
-    left: 29%;
-}
-
-.skills-nav{
-    left: 49%;
-}
-
-.contact-nav{
-    left: 70%;
-}
-
-.nav:hover{
-    color: #DBDAEA;
-    background-color: #857E61;
-}
-
-.nav-menu{
-    display: inline;
-    list-style: none;
-    margin-left: 20px;
-}
-
-.home{
-    position: fixed;
-    left: 3%;
-    top: 3%;
-    font-size: 35px;
-    transition: .3s;
-    color: #a8a7b179;
-    background-color: none;
-}
-
-.home:hover{
-    color: #DBDAEA
-}
-
-.header{
+.perfil{
+    background-color: #B1BAC7;
     margin: auto;
+    padding: 25px;
+    width: 500px;
     text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.705);
+    color: #2e2f30;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 17px;
 }
 
-.titulo{
-    
-    font-size: 8em;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    color: rgb(14, 14, 14);
+h1{
+    font-size: 28px;
+}
+
+.skills{
+    color: #B2B7BF;
+    margin: auto;
+    width: 400px;
+    background-color: #565759;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.705);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+h3{
+    color: #252525;
+    text-align: center;
+    font-size: 24px;
 }
 
 .img{
     border-radius: 50%;
-    position: absolute;
-    right: 25%;
-    top: 25%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #293A52;
 }
 
-.arrow{
-    position: absolute;
-    font-size: 80px;
-    top: 87%;
-    left: 50%;
+
+.lista{
+    list-style-type: none;
+    line-height: 1.8;
+    font-size: 18px;
+    
 }
 
-.arrow-icon{
-    color: #dbdaea79;
-    transition: .3s;
+.header{
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
 }
 
-.arrow-icon:hover{
-    color: #dbdaea;
-}
-
-/* ---------------second page------------------ */
-
-.second-page{
-    height: 1400px;
-    background-image: url(teclado-minimalista.jpg);
-    background-size: cover;
-    color: rgb(51, 51, 51);
-}
-
-.arrow2{
-    position: absolute;
-    font-size: 80px;
-    top: 230%;
-    left: 50%;
-}
-
-.arrow-icon2{
-    color: #70707979;
-    transition: .3s;
-}
-
-.description{
-    position: absolute;
-    text-align: right;
-    top: 200%;
-    right: 10%;
-    width: 900px;
+.nome{
     font-size: 40px;
+    text-align: center;
+    
+}
+.nav{
+    text-decoration: none;
+    color: #B2B7BF;
+    background-color: #293A52;
+    padding: 8px;
+    border-radius: 3px;
+    transition: .3s;
+
 }
 
-.i-am{
-    position: absolute;
-    left: 10%;
-    top: 160%;
-    font-size: 50px;
-    width: 700px;
-    font-weight: 600;
+.nav:hover{
+    background-color: #94989c;
+    color: #1f2020;
+    padding: 9px;
+}
+
+.icone-lista{
+    font-size: 22px;
+    transition: .2s;
+    color: #252525;
+}
+
+.icone-lista:hover{
+    font-size: 29px;
+    color: #293A52;
+    
 }
 
 .trybe{
-    color: #857E61;
+    color: #293A52;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .trybe:hover{
     text-decoration: underline;
 }
 
-/* ------------ third page------------- */
+.redes{
+    text-align: center;
+    font-size: 2.5em;
+    text-decoration: none;
 
-.third-page{
-    height: 1400px;
-    background-image: url(lampada.jpg);
-    background-size: cover;
-    background-position: 20vw;
-    line-height: 50px;
-}
-
-.third-page h3{
-    font-size: 30px;
-
-}
-.lista{
-    list-style: none;
-    font-size: 25px;
-    
-}
-
-.skills-known{
-    width: 400px;
-    position: absolute;
-    left: 10%;
-    top: 300%;
-    color: #818186;
-}
-
-.skills-unknown{
-    width: 400px;
-    position: absolute;
-    left: 10%;
-    top: 350%;
-    color: #818186;
-}
-
-.icone-lista{
-    font-size: 30px;
-    transition: .2s;
-}
-
-.icone-lista:hover{
-    font-size: 39px;
-    color: #d1d1da;
-}
-
-.contato{
-    position: absolute;
-    right: 10%;
-    top: 400%;
-    color: #818186;
-    line-height: 70px;
 }
 
 .icones-redes{
-    font-size: 50px;
-    color: #818186;
-    transition: .3s;
-    margin-left: 18px;
+    color: #252525;
+    transition: .4s;
 }
 
 .icones-redes:hover{
-    color: #d1d1da;
+    color: #293A52;
 }
 
-.footer{
-    left: 50%;
-    text-align: center;
-    position: absolute;
-    top: 420%;
-    color: #818186;
+.easter-egg{
+    overflow: hidden;
+    height: 31px;
+    transition: .5s;
 }
 
+.easter-egg:active{
+    height: 100px;
+}
 
+.easter-egg-p{
+    margin-top: 5px;
+    overflow: hidden;
+}
