@@ -18,6 +18,7 @@ body{
     height: 1400px;
     background-image: url(page1.jpg);
     background-size: cover;
+    transition: .3s;
 }
 
 .nav{
