@@ -26,7 +26,7 @@ body{
     position: absolute;
     text-align: center;
     color: #252527c2;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-top: 1vh;
     transition: .3s;
     width: 10vw;
@@ -56,7 +56,7 @@ body{
     position: fixed;
     left: 3vw;
     top: 3vh;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     transition: .3s;
     color: #a8a7b179;
     background-color: none;
@@ -78,7 +78,7 @@ body{
 
 .titulo{
     
-    font-size: 6em;
+    font-size: 6rem;
     position: absolute;
     top: 50vh;
     left: 20vw;
@@ -98,7 +98,7 @@ body{
 
 .arrow{
     position: absolute;
-    font-size: 5em;
+    font-size: 5rem;
     top: 85vh;
     right: 3vw;
 }
@@ -124,7 +124,7 @@ body{
 
 .arrow2{
     position: absolute;
-    font-size: 5em;
+    font-size: 5rem;
     top: 195vh;
     right: 3vw;
 }
@@ -146,14 +146,14 @@ body{
     top: 165vh;
     max-height: 5vh;
     right: 10vw;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .i-am{
     position: absolute;
     left: 10%;
     top: 125vh;
-    font-size: 2.7em;
+    font-size: 2.7rem;
     max-width: 500px;
     font-weight: 600;
 }
@@ -178,12 +178,12 @@ body{
 }
 
 .third-page h3{
-    font-size: 2em;
+    font-size: 2rem;
 
 }
 .lista{
     list-style: none;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     
 }
 
@@ -204,12 +204,12 @@ body{
 }
 
 .icone-lista{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     transition: .3s;
 }
 
 .icone-lista:hover{
-    font-size: 1.9em;
+    font-size: 1.9rem;
     color: #fdfdff;
 }
 
@@ -221,7 +221,7 @@ body{
 }
 
 .icones-redes{
-    font-size: 3.4em;
+    font-size: 3.4rem;
     color: #818186;
     transition: .3s;
     margin-left: 18px;
