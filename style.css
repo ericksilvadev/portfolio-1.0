@@ -141,7 +141,7 @@ body{
 .description{
     position: absolute;
     text-align: right;
-    min-width: 400px;
+    min-width: 350px;
     max-width: 1000px;
     top: 165vh;
     max-height: 5vh;
