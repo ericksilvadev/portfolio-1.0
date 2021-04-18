@@ -97,16 +97,19 @@ body{
 }
 
 .arrow{
+    width: 100%;
     position: absolute;
     font-size: 5rem;
     top: 90vh;
-    right: 45vw;
+    text-align: center;
     transition: .3s;
+    margin: auto;
 }
 
 .arrow-icon{
     color: #dbdaea79;
     transition: .3s;
+    margin: auto;
 }
 
 .arrow:hover{
@@ -130,9 +133,10 @@ body{
 
 .arrow2{
     position: absolute;
+    width: 100%;
+    text-align: center;
     font-size: 5rem;
     top: 200vh;
-    right: 45vw;
     transition: .3s;
 }
 
