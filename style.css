@@ -24,55 +24,54 @@ body{
 
 .nav{
     position: absolute;
-    text-align: center;
-    color: #252527c2;
-    font-size: 1.5rem;
+    color: #232324;
+    font-size: 1.7rem;
+    font-weight: 480;
     margin-top: 1vh;
     transition: .3s;
-    width: 10vw;
     padding: 5px;
     border-radius: 5px;
-    top: 2vh;
+    top: 1vh;
     z-index: 4;
 }
 
 .about-nav{
-    left: 29vw;
+    left: 18vw;
 }
 
 .skills-nav{
-    left: 49vw;
+    left: 45vw;
 }
 
 .contact-nav{
-    left: 70vw;
+    right: 18vw;
 }
 
 .nav:hover{
-    color: #e2e2e2;
+    color: #575757;
 }
 
 .home{
     position: fixed;
     left: 3vw;
-    top: 3vh;
+    top: 2vh;
     font-size: 2.2rem;
     transition: .3s;
-    color: #a8a7b179;
+    color: #232324d8;
     background-color: none;
     z-index: 4;
 }
 
 .home:hover{
-    color: #DBDAEA
+    color: #575757
 }
 
 .header{
     position: fixed;
     width: 100vw;
     text-align: center;
-    background-color: #afadb94d;
-    height: 10vh;
+    background-color: #c4c2d1c9;
+    height: 8vh;
     z-index: 3;
 }
 
@@ -82,7 +81,7 @@ body{
     position: absolute;
     top: 50vh;
     left: 20vw;
-    color: rgb(14, 14, 14);
+    color: rgb(27, 27, 27);
     z-index: 2;
 }
 
@@ -94,6 +93,7 @@ body{
     right: 25vw;
     top: 25vh;
     z-index: 1;
+    transition: .3s;
 }
 
 .arrow{
@@ -101,11 +101,17 @@ body{
     font-size: 5rem;
     top: 90vh;
     right: 45vw;
+    transition: .3s;
 }
 
 .arrow-icon{
     color: #dbdaea79;
     transition: .3s;
+}
+
+.arrow:hover{
+    
+    top: 90.5vh;
 }
 
 .arrow-icon:hover{
@@ -127,6 +133,11 @@ body{
     font-size: 5rem;
     top: 200vh;
     right: 45vw;
+    transition: .3s;
+}
+
+.arrow2:hover{
+    top: 200.5vh;
 }
 
 .arrow-icon2{
@@ -147,6 +158,7 @@ body{
     max-height: 5vh;
     right: 10vw;
     font-size: 2rem;
+    font-weight: 300;
 }
 
 .i-am{
@@ -184,15 +196,36 @@ body{
 .lista{
     list-style: none;
     font-size: 1.3rem;
-    
+    color: #bdbdc4;
 }
+
+.lista li{
+    transition: .3s;
+    min-width: 280px;
+    border-radius: 5px;
+    padding: .5vh 0vw .5vh 1vw;
+}
+
+.lista li:hover{
+    color: #d8b184;
+    cursor: default;
+}
+
 
 .skills-known{
     width: 400px;
     position: absolute;
     left: 10vw;
     top: 230vh;
-    color: #818186;
+    
+}
+
+h3 {
+    margin-bottom: 1.5vh;
+    color: #bdbdc4;
+}
+h3:hover{
+    cursor: default;
 }
 
 .skills-unknown{
@@ -200,35 +233,42 @@ body{
     position: absolute;
     left: 10vw;
     top: 280vh;
-    color: #818186;
 }
 
 .icone-lista{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-right: .7vw;
     transition: .3s;
 }
 
 .icone-lista:hover{
-    font-size: 1.9rem;
-    color: #fdfdff;
+    font-size: 2.3rem;
+    color: #d8b184;
 }
 
-.contato{
+.contato h3{
     position: absolute;
-    right: 5vw;
+    right: 3vw;
     top: 320vh;
-    color: #818186;
+    color: #bdbdc4;
 }
 
 .icones-redes{
-    font-size: 3.4rem;
-    color: #818186;
-    transition: .3s;
+    color: #bdbdc4;
+    transition: .4s;
     margin-left: 18px;
 }
 
 .icones-redes:hover{
-    color: #fdfdff;
+    color: #d8b184;
+}
+
+.redes{
+    position: absolute;
+    font-size: 2.5em;
+    right: 3vw;
+    top: 327vh;
+
 }
 
 .footer{
