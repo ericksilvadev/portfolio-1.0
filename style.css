@@ -22,29 +22,36 @@ body{
     transition: .3s;
 }
 
+.header{
+    position: fixed;
+    width: 100vw;
+    background-color: #c4c2d1c9;
+    height: 8vh;
+    z-index: 3;
+    text-align: center;
+}
+
 .nav{
-    position: absolute;
-    color: #232324;
-    font-size: 1.7rem;
-    font-weight: 480;
-    margin-top: 1vh;
     transition: .3s;
-    padding: 5px;
-    border-radius: 5px;
-    top: 1vh;
-    z-index: 4;
 }
 
-.about-nav{
-    left: 18vw;
+ul.nav-menu{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 480;
 }
 
-.skills-nav{
-    left: 45vw;
+li.nav{
+    float: left;
 }
 
-.contact-nav{
-    left: 72vw;
+li.nav a{
+    display: block;
+    text-align: center;
+    color: #2c2c2cee;
+    padding: 1.5vh 5vw;
+    margin-top: 1vh;
 }
 
 .nav:hover{
@@ -64,15 +71,6 @@ body{
 
 .home:hover{
     color: #575757
-}
-
-.header{
-    position: fixed;
-    width: 100vw;
-    text-align: center;
-    background-color: #c4c2d1c9;
-    height: 8vh;
-    z-index: 3;
 }
 
 .titulo{
