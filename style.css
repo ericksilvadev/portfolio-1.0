@@ -81,7 +81,7 @@ body{
     position: absolute;
     top: 50vh;
     left: 20vw;
-    color: rgb(27, 27, 27);
+    color: rgb(0, 0, 0);
     z-index: 2;
 }
 
