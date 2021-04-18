@@ -275,7 +275,7 @@ h3:hover{
 }
 
 .footer{
-    left: 45vw;
+    width: 100%;
     text-align: center;
     position: absolute;
     top: 335vh;
