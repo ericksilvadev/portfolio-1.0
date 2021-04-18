@@ -229,6 +229,7 @@ h3:hover{
 }
 
 .skills-unknown{
+    margin-top: 1vw;
     width: 400px;
     position: absolute;
     left: 10vw;
