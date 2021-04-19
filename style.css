@@ -17,7 +17,7 @@ body{
 .front-page{
     height: 110vh;
     width: 100%;
-    background-image: url(page1.jpg);
+    background-image: url(./images/page1.jpg);
     background-size: cover;
     transition: .3s;
 }
@@ -124,7 +124,7 @@ li.nav a{
 .second-page{
     height: 110vh;
     width: 100%;
-    background-image: url(teclado-minimalista.jpg);
+    background-image: url(./images/teclado-minimalista.jpg);
     background-size: cover;
     color: rgb(51, 51, 51);
 }
@@ -185,7 +185,7 @@ li.nav a{
 .third-page{
     height: 120vh;
     width: 100%;
-    background-image: url(lampada.jpg);
+    background-image: url(./images/lampada.jpg);
     background-size: cover;
     background-position: 20vw;
     line-height: 4vh;
