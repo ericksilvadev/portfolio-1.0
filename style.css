@@ -53,7 +53,6 @@ ul.nav-menu {
 
 .nav-menu li {
   display: inline-block;
- 
 }
 
 .nav-menu li a {
@@ -76,7 +75,6 @@ ul.nav-menu {
   font-size: 2.2rem;
   transition: .3s;
   color: #232324d8;
-  background-color: none;
   z-index: 4;
 }
 
@@ -309,7 +307,7 @@ h3:hover {
     display: flex;
     position: fixed;
     font-size: 4rem;
-    top: 90vh;
+    top: 85vh;
     transition: .3s;
     z-index: 6;
     align-self: flex-end;
