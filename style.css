@@ -300,7 +300,11 @@ h3:hover {
   }
 
   .home{
-    display: none;
+    color: #c4c2d100;
+  }
+
+  .home:hover{
+    color: #c4c2d100;
   }
 
   .arrow-mobile {
