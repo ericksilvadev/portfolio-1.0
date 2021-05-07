@@ -361,6 +361,10 @@ h3:hover {
   padding: 2em;
 }
 
+.pixels-art {
+  margin-bottom: 30vh;
+}
+
 .icones-redes {
   color: #58585894;
   transition: .4s;
@@ -377,7 +381,7 @@ h3:hover {
 
 .footer {
   position: absolute;
-  top: 445vh;
+  top: 455vh;
   width: 100%;
   text-align: center;
   color: #818186;
@@ -420,6 +424,10 @@ h3:hover {
 
   .project-size {
     min-width: 80vw;
+  }
+
+  .footer {
+    top: 460vh
   }
   
 /* .header {
