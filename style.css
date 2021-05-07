@@ -281,54 +281,93 @@ h3:hover {
   color: #d8b184;
 }
 
-.contato h3 {
-  position: absolute;
-  right: 3vw;
-  top: 320vh;
-  color: #bdbdc4;
+  /* ------------ fourth page------------- */
+
+.fourth-page {
+  min-height: 130vh;
+  background-color: #dbdbdb;
+  text-align: center;
+}
+
+.fourth-page h3 {
+  font-size: 2.1rem;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+  color: #424242;
+}
+
+.project-img {
+  max-width: 700px;
+  width: 40vw;
+  display: flex;
+  align-self: flex-start;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projects h4 {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  color: #424242;
+}
+
+.project-size {
+  max-width: 40vw;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  transition: .2s;
+}
+
+.project-size:hover {
+  background-color: #b1b1b152;
+}
+
+.project-size p {
+  color: #2c2c2c;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 2em;
 }
 
 .icones-redes {
-  color: #bdbdc4;
+  color: #58585894;
   transition: .4s;
-  margin-left: 18px;
+  margin: 6vh 1vw 2vh 1vw;
 }
 
 .icones-redes:hover {
-  color: #d8b184;
+  color: #797979;
 }
 
 .redes {
-  position: absolute;
   font-size: 2.5em;
-  right: 3vw;
-  top: 327vh;
 }
 
 .footer {
+  position: absolute;
+  top: 455vh;
   width: 100%;
   text-align: center;
-  position: absolute;
-  top: 335vh;
   color: #818186;
+  padding-bottom: 5px;
 }
 
 .arrow-mobile {
   display: none;
 }
 
-  /* ------------ fourth page------------- */
 
-.fourth-page {
-  height: 100vh;
-  background-color: #aaaaaa;
-}
-
-.project-img {
-  
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .front-page {
     display: flex;
   }
@@ -348,7 +387,6 @@ h3:hover {
     top: 85vh;
     transition: .3s;
     z-index: 6;
-    align-self: flex-end;
   }
 
   .arrow-mobile-icon {
@@ -356,7 +394,10 @@ h3:hover {
     transition: .3s;
     margin-right: 3vw;
     padding: 15px;
-    align-self: flex-end;
+  }
+
+  .project-size {
+    min-width: 80vw;
   }
   
 /* .header {
@@ -395,3 +436,4 @@ h3:hover {
   }
 }   */
 
+}
