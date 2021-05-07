@@ -22,6 +22,30 @@ body {
   transition: .3s;
 }
 
+.language {
+  float: right;
+  text-align: right;
+  padding: 5px;
+  margin-right: 1vw;
+  margin-top: 8.5vh;
+  height: 2.7em;
+  overflow: hidden;
+  color: rgb(51, 51, 51);
+}
+
+.language-icon {
+  font-size: 3em;
+  background: none;
+  border: none;
+  transition: .3s;
+  color: rgb(27, 27, 27);
+}
+
+.language-icon:hover {
+  cursor: pointer;
+  color: rgb(44, 44, 44);
+}
+
 .header {
   display: flex;
   position: fixed;
@@ -293,6 +317,16 @@ h3:hover {
   display: none;
 }
 
+  /* ------------ fourth page------------- */
+
+.fourth-page {
+  height: 100vh;
+  background-color: #aaaaaa;
+}
+
+.project-img {
+  
+}
 
 @media only screen and (max-width: 768px) {
   .front-page {
@@ -324,7 +358,6 @@ h3:hover {
     padding: 15px;
     align-self: flex-end;
   }
-
   
 /* .header {
     text-align: right;
@@ -359,5 +392,6 @@ h3:hover {
   }
   li.nav {
     float: none;
-  } */
-}
+  }
+}   */
+
