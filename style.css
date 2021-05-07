@@ -214,8 +214,30 @@ ul.nav-menu {
 
 /* ------------ third page------------- */
 
+.arrow3 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  top: 311vh;
+  transition: .3s;
+}
+
+.arrow3:hover {
+  top: 311.5vh;
+}
+
+.arrow-icon3 {
+  color: #707079a2;
+  transition: .3s;
+}
+
+.arrow-icon3:hover {
+  color: #c9c9c99f;
+}
+
 .third-page {
-  height: 120vh;
+  height: 110vh;
   width: 100%;
   background-image: url(./images/lampada.jpg);
   background-size: cover;
