@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,13 +18,17 @@
       <nav>
         <ul class="nav-menu">
           <!-- <li class="fas fa-bars hamburguer-menu btn"></li> -->
-          <li><a href=#second-page>Sobre</a></li>  
+          <li><a href=#second-page>Sobre</a></li>
           <li><a href=#third-page>Skills</a></li>
+          <li><a href=#projects>Projetos</a></li>
           <li><a href=#contato>Contato</a></li>
-        </ul> 
-      </nav>  
-    </header> 
-    <img src="./images/profile.jpg" alt="uma foto minha de perfil" class ="img">
+        </ul>
+      </nav>
+    </header>
+    <!-- <div class="language">
+      <button type="button" class="fas fa-language language-icon btn" onclick='clickLanguage()'></button>
+    </div> -->
+    <img src="./images/profile.jpg" alt="uma foto minha de perfil" class="img">
     <h1 id="titulo" class="titulo">Olá,<br> <span class="nome"> sou o Erick! </span></h1>
     <div class="arrow">
       <a href="#second-page">
@@ -38,52 +43,80 @@
   </div>
   <!-- segunda página -->
   <div class="second-page" id="second-page">
-    <h2 class="i-am">Sou um estudande de desenvolvimento web na <a href="https://www.betrybe.com/" target="_blank" class="trybe">Trybe</a></h2>
+    <h2 class="i-am">Sou um estudande de desenvolvimento web na <a href="https://www.betrybe.com/" target="_blank"
+        class="trybe">Trybe</a></h2>
     <section class="description">
       <p id="sobre">
-        Tenho 21 anos, brasileiro nascido em São Paulo e atualmente morando em Goiânia. <strong>Estou estudando programação 
-          na Trybe</strong> desde o dia 05/04/2021. <em>Ao longo da minha formação irei atualizar este portfólio com meus novos aprendizados. :D</em>
-        </p>
-      </section>
-      <div class="arrow2"><a href="#third-page"><i class="fas fa-chevron-down arrow-icon2"></i></a></div>
+        Tenho 21 anos, brasileiro nascido em São Paulo e atualmente morando em Goiânia. <strong>Estou estudando
+          programação
+          na Trybe</strong> desde o dia 05/04/2021. <em>Ao longo da minha formação irei atualizar este portfólio com
+          meus novos aprendizados. :D</em>
+      </p>
+    </section>
+    <div class="arrow2"><a href="#third-page"><i class="fas fa-chevron-down arrow-icon2"></i></a></div>
+  </div>
+  <!-- terceira página -->
+  <div class="third-page" id="third-page">
+    <section class="skills-known">
+      <h3 id="skills">Minhas habilidades:</h3>
+      <ul class="lista">
+        <li><em class="fas fa-code-branch icone-lista icone-lista"></em> Git</li>
+        <li><em class="fab fa-github icone-lista icone-lista"></em> GitHub</li>
+        <li><em class="fab fa-ubuntu icone-lista icone-lista"></em> Unix</li>
+        <li><em class="far fa-comments icone-lista icone-lista"></em> Comunicação</li>
+        <li><em class="fab fa-html5 icone-lista icone-lista"></em> HTML</li>
+        <li><em class="fab fa-css3-alt icone-lista icone-lista"></em> CSS</li>
+        <li><em class="fab fa-js-square icone-lista icone-lista"></em> JavaScript</li>
+      </ul>
+    </section>
+    <section class="skills-unknown">
+      <h3>O que ainda irei aprender:</h3>
+      <ul class="lista">
+        <li><em class="fab fa-react icone-lista icone-lista"></em> React</li>
+        <li><em class="fab fa-python icone-lista icone-lista"></em> Python</li>
+        <li><em class="fab fa-node-js icone-lista icone-lista"></em> NodeJS</li>
+        <li><em class="fas fa-server icone-lista icone-lista"></em> SQL</li>
+        <li><em class="fas fa-laptop-code icone-lista icone-lista"></em> Ciência da computação</li>
+      </ul>
+    </section>
+    <div class="arrow3"><a href="#projects"><i class="fas fa-chevron-down arrow-icon3"></i></a></div>
+  </div>
+  <!-- quarta pagina -->
+  <div class="fourth-page" id="projects">
+    <h3>Aqui estão alguns dos meus projetos:</h3>
+    <div class="projects">
+      <div class="todo-list project-size">
+        <h4>Lista de tarefas</h4>
+        <a href="./projects/todo-list/" target="_blank" rel="noopener noreferrer"><img class="project-img"
+            src="/projects/todo-list/todo-list.jpeg" alt="screenshot do meu projeto 'lista de tarefas'"></a>
+        <p class="project-description">Neste projeto criei uma lista de tarefas dinâmica em que os itens podem ser
+          adicionados, excluídos, trocados de posição e salvos para serem vistos da mesma maneira em uma nova visita à
+          página. Um conceito aparentemente simples mas que exige um bom conhecimento de HTML, CSS e JavaScript.</p>
+      </div>
+      <div class="pixels-art project-size">
+        <h4>Arte com pixels</h4>
+        <a href="./projects/pixels-art/" target="_blank" rel="noopener noreferrer"><img class="project-img"
+            src="/projects/pixels-art/pixels-art.png" alt="screenshot do meu projeto 'arte com pixels'"></a>
+        <p class="project-description">Aqui criei um quadro que pode ser colorido pelo usuário. A cada
+          carregamento da página, cores aleatórias são geradas dinamicamente. Este projeto conhecimento em
+          HTML, CSS e JavaScript.</p>
+      </div>
     </div>
-    <!-- terceira página -->
-    <div class="third-page" id="third-page">
-      <section  class="skills-known">
-        <h3 id="skills">Minhas habilidades:</h3>
-        <ul class="lista">
-          <li><em class="fas fa-code-branch icone-lista icone-lista"></em> Git</li>
-          <li><em class="fab fa-github icone-lista icone-lista"></em> GitHub</li>
-          <li><em class="fab fa-ubuntu icone-lista icone-lista"></em> Unix</li>
-          <li><em class="far fa-comments icone-lista icone-lista"></em> Comunicação</li>
-          <li><em class="fab fa-html5 icone-lista icone-lista"></em> HTML</li>
-          <li><em class="fab fa-css3-alt icone-lista icone-lista"></em> CSS</li>
-          <li><em class="fab fa-js-square icone-lista icone-lista"></em> JavaScript</li>
-        </ul>
-      </section>
-      <section class="skills-unknown">
-        <h3>O que ainda irei aprender:</h3>
-        <ul class="lista">
-          <li><em class="fab fa-react icone-lista icone-lista"></em> React</li>
-          <li><em class="fab fa-python icone-lista icone-lista"></em> Python</li>
-          <li><em class="fab fa-node-js icone-lista icone-lista"></em> NodeJS</li>
-          <li><em class="fas fa-server icone-lista icone-lista"></em> SQL</li>
-          <li><em class="fas fa-laptop-code icone-lista icone-lista"></em> Ciência da computação</li>
-        </ul>
-      </section>
+    <footer class="footer">
       <section class="contato">
-        <h3>Onde me encontrar:</h3>
         <div class="redes" id="contato">
-          <a href="https://github.com/ericksilvadev" target="_blank"><i class="fab fa-github icones-redes"></i></a>  
-          <a href="https://www.linkedin.com/in/ericksilvadev/" target="_blank"><i class="fab fa-linkedin icones-redes"></i></a>
-          <a href="https://www.instagram.com/ericksilvadev/" target="_blank"><i class="fab fa-instagram icones-redes"></i></a>
+          <a href="https://github.com/ericksilvadev" target="_blank"><i class="fab fa-github icones-redes"></i></a>
+          <a href="https://www.linkedin.com/in/ericksilvadev/" target="_blank"><i
+              class="fab fa-linkedin icones-redes"></i></a>
+          <a href="https://www.instagram.com/ericksilvadev/" target="_blank"><i
+              class="fab fa-instagram icones-redes"></i></a>
           <a href="mailto:erick.silva6653@gmail.com"><i class="fas fa-envelope icones-redes"></i></a>
         </div>
       </section>
-    </div>
-    <footer class="footer">
       <p>&#169; Erick Silva 2021</p>
     </footer>
-  </body>
-  </html>
-  
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

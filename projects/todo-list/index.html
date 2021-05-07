@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Lista de Tarefa</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">Minha Lista de Tarefas</h1>
+    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+  </header>
+  <main>
+    <div class="tasks-place">
+      <p class="error"></p>
+      <ol id="lista-tarefas" class="task-list">
+      </ol>
+    </div>
+    <div class="create">
+      <input type="text" name="add-tasks" placeholder="Adicione uma tarefa" class='add-tasks' id="texto-tarefa">
+      <button id='criar-tarefa' class="create-task-btn fas fa-plus-circle"></button>
+      <button id="remover-selecionado" class="fas fa-minus-circle rmv-selected-btn"></button>
+      <div class="arrow-container">
+        <button id="mover-cima" class="fas fa-chevron-up up arrow"></button>
+        <button id="mover-baixo" class="fas fa-chevron-down down arrow"></button>
+      </div>
+
+    </div>
+    <div class="btns">
+      <button id='apaga-tudo' class="delete-all-btn">Limpar todas as tarefas</button>
+      <button id='remover-finalizados' class="delete-btn">Remover tarefas prontas</button>
+      <button id="salvar-tarefas" class='save-btn'>Salvar tarefas</button> 
+    </div>
+  </main> 
+  <script src="script.js"></script>
+</body>
+</html>
