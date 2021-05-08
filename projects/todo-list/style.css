@@ -5,7 +5,7 @@ body {
 }
 
 .selected {
-  background-color: grey;
+  background-color: rgb(187, 187, 187);
 }
 
 .completed {
@@ -180,11 +180,11 @@ p {
 
 .task:hover {
   cursor: default;
-  background-color: #c7c7c7;
+  background-color: #cccccc88;
 }
 
 .selected:hover {
-  background-color: grey;
+  background-color: rgb(187, 187, 187);
 }
 
 main {
