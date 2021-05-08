@@ -204,7 +204,7 @@ main {
   }
   
   .create {
-    width: 200px;
+    width: 300px;
     margin: auto;
   }
 
@@ -220,5 +220,9 @@ main {
     border-radius: 6px;
     margin-top: 7px;
     width: 150px;
+  }
+
+  .add-tasks {
+    width: 100%;
   }
 }
