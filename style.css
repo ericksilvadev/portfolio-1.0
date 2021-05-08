@@ -306,7 +306,7 @@ h3:hover {
   /* ------------ fourth page------------- */
 
 .fourth-page {
-  min-height: 140vh;
+  min-height: 145vh;
   background-color: #dbdbdb;
   text-align: center;
 }
@@ -421,12 +421,13 @@ h3:hover {
 
   .project-size {
     min-width: 80vw;
+    background-color: #b1b1b152;
   }
 
   .footer {
     top: 460vh
   }
-  
+
 /* .header {
     text-align: right;
   }
