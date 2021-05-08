@@ -237,7 +237,7 @@ ul.nav-menu {
 }
 
 .third-page {
-  height: 110vh;
+  min-height: 110vh;
   width: 100%;
   background-image: url(./images/lampada.jpg);
   background-size: cover;
@@ -306,7 +306,7 @@ h3:hover {
   /* ------------ fourth page------------- */
 
 .fourth-page {
-  min-height: 145vh;
+  min-height: 115vh;
   background-color: #dbdbdb;
   text-align: center;
 }
@@ -377,8 +377,6 @@ h3:hover {
 }
 
 .footer {
-  position: absolute;
-  top: 455vh;
   width: 100%;
   text-align: center;
   color: #818186;
