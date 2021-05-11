@@ -14,7 +14,7 @@ const error = document.querySelector('.error');
 function createTask(text) {
   // error.innerHTML = '';
   // if (!taskTxt.value) {
-  //   error.innerHTML = 'Digite uma tarefa para adicionar à lista';
+  //   // error.innerHTML = 'Digite uma tarefa para adicionar à lista';
   //   return;
   // }
   const newTask = document.createElement('li');
@@ -137,6 +137,9 @@ mvUp.addEventListener('click', () => {
   } else if (selected.classList.contains('completed')) {
     above.classList.add('completed');
     selected.classList.remove('completed')
+  } else if (above.classList.contains('completed')) {
+    selected.classList.add('completed');
+    above.classList.remove('completed');
   }
   selected.classList.remove('selected');
   above.classList.add('selected');
@@ -160,7 +163,10 @@ mvDown.addEventListener('click', () => {
     console.log('ok');
   } else if (selected.classList.contains('completed')) {
     below.classList.add('completed');
-    selected.classList.remove('completed')
+    selected.classList.remove('completed');
+  } else if (below.classList.contains('completed')) {
+    selected.classList.add('completed');
+    below.classList.remove('completed');
   }
   selected.classList.remove('selected');
   below.classList.add('selected');
