@@ -210,14 +210,15 @@ main {
 
   .btns {
     width: 200px;
+    margin-bottom: 2vh;
   }
 
   .icon-btn {
-    padding: 3px;
+    padding: 7px;
   }
 
   .arrow {
-    padding: 3px;
+    padding: 7px;
   }
 
   .delete-btn,
