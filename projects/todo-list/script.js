@@ -118,10 +118,9 @@ function getSelected() {
 mvUp.addEventListener('click', () => {
   const selected = getSelected();
   if (!selected) {
-    console.log('falhou');
     return;
   }
-  const above = selected.previousSibling;
+  const above = selected.previousElementSibling;
   if (!above) {
     return;
   }
@@ -137,10 +136,9 @@ mvUp.addEventListener('click', () => {
 mvDown.addEventListener('click', () => {
   const selected = getSelected();
   if (!selected) {
-    console.log('falhou');
     return;
   }
-  const below = selected.nextSibling;
+  const below = selected.nextElementSibling;
   if (!below) {
     return;
   }
