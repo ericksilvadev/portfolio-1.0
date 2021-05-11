@@ -167,9 +167,8 @@ p {
   min-width: 200px;
   max-width: 500px;
   list-style-type: none;
-  padding: 0px;
+  padding-bottom: 34px;
   margin: auto;
-  padding-top: 50px;
 }
 
 .task {

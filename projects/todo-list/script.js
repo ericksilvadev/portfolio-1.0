@@ -12,11 +12,11 @@ const error = document.querySelector('.error');
 // criar tarefas novas
 
 function createTask(text) {
+  // error.innerHTML = '';
   // if (!taskTxt.value) {
   //   error.innerHTML = 'Digite uma tarefa para adicionar à lista';
   //   return;
   // }
-  error.innerHTML = '';
   const newTask = document.createElement('li');
   newTask.classList.add('task');
   newTask.innerHTML = text;
@@ -34,11 +34,16 @@ const task = document.getElementsByTagName('li');
 // trocar background de item clicado
 
 taskList.addEventListener('click', (event) => {
+  const selected = getSelected();
   const evt = event.target;
   for (let index = 0; index < task.length; index += 1) {
     task[index].classList.remove('selected');
   }
-  evt.classList.add('selected');
+  // if (selected) {
+    // evt.classList.remove('selected')
+  // } else {
+    evt.classList.add('selected');
+  // }
 });
 
 // riscar tarefas prontas
