@@ -12,11 +12,11 @@ const error = document.querySelector('.error');
 // criar tarefas novas
 
 function createTask(text) {
+  // error.innerHTML = '';
   // if (!taskTxt.value) {
   //   error.innerHTML = 'Digite uma tarefa para adicionar à lista';
   //   return;
   // }
-  error.innerHTML = '';
   const newTask = document.createElement('li');
   newTask.classList.add('task');
   newTask.innerHTML = text;
@@ -34,11 +34,16 @@ const task = document.getElementsByTagName('li');
 // trocar background de item clicado
 
 taskList.addEventListener('click', (event) => {
+  const selected = getSelected();
   const evt = event.target;
   for (let index = 0; index < task.length; index += 1) {
     task[index].classList.remove('selected');
   }
-  evt.classList.add('selected');
+  // if (selected) {
+    // evt.classList.remove('selected')
+  // } else {
+    evt.classList.add('selected');
+  // }
 });
 
 // riscar tarefas prontas
@@ -127,6 +132,12 @@ mvUp.addEventListener('click', () => {
   const clone = above.cloneNode(true);
   above.innerHTML = selected.innerHTML;
   selected.innerHTML = clone.innerHTML;
+  if (selected.classList.contains('completed') && above.classList.contains('completed')) {
+    console.log('ok');
+  } else if (selected.classList.contains('completed')) {
+    above.classList.add('completed');
+    selected.classList.remove('completed')
+  }
   selected.classList.remove('selected');
   above.classList.add('selected');
 });
@@ -145,6 +156,12 @@ mvDown.addEventListener('click', () => {
   const clone = below.cloneNode(true);
   below.innerHTML = selected.innerHTML;
   selected.innerHTML = clone.innerHTML;
+  if (selected.classList.contains('completed') && below.classList.contains('completed')) {
+    console.log('ok');
+  } else if (selected.classList.contains('completed')) {
+    below.classList.add('completed');
+    selected.classList.remove('completed')
+  }
   selected.classList.remove('selected');
   below.classList.add('selected');
 });
