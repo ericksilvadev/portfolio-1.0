@@ -211,6 +211,15 @@ main {
   .btns {
     width: 200px;
   }
+
+  .icon-btn {
+    padding: 3px;
+  }
+
+  .arrow {
+    padding: 3px;
+  }
+
   .delete-btn,
   .delete-all-btn,
   .save-btn {
