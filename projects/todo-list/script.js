@@ -13,10 +13,10 @@ const error = document.querySelector('.error');
 
 function createTask(text) {
   // error.innerHTML = '';
-  // if (!taskTxt.value) {
-  //   error.innerHTML = 'Digite uma tarefa para adicionar à lista';
-  //   return;
-  // }
+  if (!taskTxt.value) {
+    // error.innerHTML = 'Digite uma tarefa para adicionar à lista';
+    return;
+  }
   const newTask = document.createElement('li');
   newTask.classList.add('task');
   newTask.innerHTML = text;
