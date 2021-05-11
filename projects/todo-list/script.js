@@ -127,6 +127,12 @@ mvUp.addEventListener('click', () => {
   const clone = above.cloneNode(true);
   above.innerHTML = selected.innerHTML;
   selected.innerHTML = clone.innerHTML;
+  if (selected.classList.contains('completed') && above.classList.contains('completed')) {
+    console.log('ok');
+  } else if (selected.classList.contains('completed')) {
+    above.classList.add('completed');
+    selected.classList.remove('completed')
+  }
   selected.classList.remove('selected');
   above.classList.add('selected');
 });
@@ -145,6 +151,12 @@ mvDown.addEventListener('click', () => {
   const clone = below.cloneNode(true);
   below.innerHTML = selected.innerHTML;
   selected.innerHTML = clone.innerHTML;
+  if (selected.classList.contains('completed') && below.classList.contains('completed')) {
+    console.log('ok');
+  } else if (selected.classList.contains('completed')) {
+    below.classList.add('completed');
+    selected.classList.remove('completed')
+  }
   selected.classList.remove('selected');
   below.classList.add('selected');
 });
