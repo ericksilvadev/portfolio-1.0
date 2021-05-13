@@ -114,4 +114,4 @@ sizeChange.addEventListener('click', () => {
 
 sizeChange.addEventListener('touchend', () => {
   pixelsColumn(boardSize);
-});>
+});
