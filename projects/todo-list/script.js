@@ -177,3 +177,11 @@ mvDown.addEventListener('click', () => {
 rmvSelected.addEventListener('click', () => {
   getSelected().remove();
 });
+
+// reconhecer enter para adicionar tarefa
+
+taskTxt.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    addBtn.click();
+  }
+})
