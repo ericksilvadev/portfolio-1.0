@@ -74,6 +74,7 @@ generateBtn.addEventListener('click', changeBoard);
 // adidionar a seleção de cores
 
 palette.addEventListener('click', (event) => {
+  palette.classList.remove('selected');
   for (let index = 0; index < color.length; index += 1) {
     color[index].classList.remove('selected');
     event.target.classList.add('selected');
