@@ -16,6 +16,11 @@ function paintPixels(event) {
   evt.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
+function cleanPixels(event) {
+  const evt = event.target;
+  evt.style.backgroundColor = 'rgb(243, 243, 243)';
+}
+
 // adicionar o pixel board
 
 function pixelsColumn(pixelsNumber) {
@@ -25,13 +30,13 @@ function pixelsColumn(pixelsNumber) {
   console.log(pixelSize);
   pixelBoard.innerHTML = '';
   const pixelBoardWidth = pixelsNumber * pixelBoardChange;
-  const px = 'px';
-  pixelBoard.style.width = pixelBoardWidth + px;
+  pixelBoard.style.width = `${pixelBoardWidth}px`;
   for (let index = 0; index < pixelsNumber * pixelsNumber; index += 1) {
     const createPixel = document.createElement('div');
     createPixel.classList.add('pixel');
     pixelBoard.appendChild(createPixel);
     createPixel.addEventListener('click', paintPixels);
+    createPixel.addEventListener('dblclick', cleanPixels);
   }
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelsNumber * pixelsNumber; index += 1) {
