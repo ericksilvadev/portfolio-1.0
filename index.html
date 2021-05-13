@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=0.65">
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="shortcut icon" href="./images/code-outline.svg" />
+  <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   <script src="https://kit.fontawesome.com/6fb2f5e971.js" crossorigin="anonymous"></script>
   <title>Erick Silva</title>
@@ -18,13 +18,18 @@
     <a href="#home"><em class="fas fa-home home"></em></a>
     <header class="header" id="header">
       <nav>
-        <ul class="nav-menu">
-          <!-- <li class="fas fa-bars hamburguer-menu btn"></li> -->
-          <li><a href=#about>Sobre</a></li>
-          <li><a href=#skills>Skills</a></li>
-          <li><a href=#projects>Projetos</a></li>
-          <li><a href=#contato>Contato</a></li>
-        </ul>
+        <!-- menu -->
+        <div class="menu-btn">
+          <div class="burger-btn"></div>
+        </div>
+        <div class="nav-container">
+          <ul class="nav-menu">
+            <li><a href=#about>Sobre</a></li>
+            <li><a href=#skills>Skills</a></li>
+            <li><a href=#projects>Projetos</a></li>
+            <li><a href=#contato>Contato</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <!-- <div class="language">
@@ -115,7 +120,7 @@
       <p>&#169; Erick Silva 2021</p>
     </footer>
   </div>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
