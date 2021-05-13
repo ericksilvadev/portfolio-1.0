@@ -5,6 +5,7 @@ const palette = document.getElementById('color-palette');
 const color = document.getElementsByClassName('color');
 const pixelBoard = document.querySelector('#pixel-board');
 const clearBtn = document.getElementsByTagName('button')[1];
+const sizeChange = document.querySelector('#size-change');
 // const colorBtn = document.getElementById('color-btn')[0];
 let boardSize = 10;
 
@@ -15,18 +16,33 @@ function paintPixels(event) {
   evt.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 
+function cleanPixels(event) {
+  const evt = event.target;
+  evt.style.backgroundColor = 'rgb(243, 243, 243)';
+}
+
 // adicionar o pixel board
 
 function pixelsColumn(pixelsNumber) {
+  inputSize.value = '';
+  const pixelSize = sizeChange.value;
+  const pixelBoardChange = parseInt(sizeChange.value) + 2;
+  console.log(pixelBoardChange);
+  console.log(pixelSize);
   pixelBoard.innerHTML = '';
-  const pixelBoardWidth = pixelsNumber * 27;
-  const px = 'px';
-  pixelBoard.style.width = pixelBoardWidth + px;
+  const pixelBoardWidth = pixelsNumber * pixelBoardChange;
+  pixelBoard.style.width = `${pixelBoardWidth}px`;
   for (let index = 0; index < pixelsNumber * pixelsNumber; index += 1) {
     const createPixel = document.createElement('div');
     createPixel.classList.add('pixel');
     pixelBoard.appendChild(createPixel);
     createPixel.addEventListener('click', paintPixels);
+    createPixel.addEventListener('dblclick', cleanPixels);
+  }
+  const pixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelsNumber * pixelsNumber; index += 1) {
+    pixel[index].style.width = `${pixelSize}px`;
+    pixel[index].style.height = `${pixelSize}px`;
   }
 }
 
@@ -42,11 +58,17 @@ function changeBoard() {
   } else if (inputSize.value > 50) {
     pixelsColumn(50);
   } else {
+    console.log(sizeChange.value);
     boardSize = inputSize.value;
     pixelsColumn(boardSize);
   }
 }
 
+inputSize.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    generateBtn.click();
+  }
+});
 generateBtn.addEventListener('click', changeBoard);
 
 // adidionar a seleção de cores
@@ -70,7 +92,7 @@ clearBtn.addEventListener('click', () => {
 
 function generateColors() {
   const letters = '0123456789ABCDEF';
-  for (let index = 1; index < color.length; index += 1) {
+  for (let index = 1; index < color.length - 1; index += 1) {
     let colorGenerate = '#';
     for (let index2 = 0; index2 < 6; index2 += 1) {
       colorGenerate += letters[Math.floor(Math.random() * 16)];
@@ -83,3 +105,13 @@ function generateColors() {
 window.onload = generateColors();
 
 // colorBtn.addEventListener('click', generateColors);
+
+// mudar tamanho do pixel
+
+sizeChange.addEventListener('click', () => {
+  pixelsColumn(boardSize);
+});
+
+sizeChange.addEventListener('touchend', () => {
+  pixelsColumn(boardSize);
+});>

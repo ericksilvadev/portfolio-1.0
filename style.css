@@ -306,7 +306,7 @@ h3:hover {
   /* ------------ fourth page------------- */
 
 .fourth-page {
-  min-height: 115vh;
+  min-height: 105vh;
   background-color: #dbdbdb;
   text-align: center;
 }
@@ -319,8 +319,8 @@ h3:hover {
 }
 
 .project-img {
-  max-width: 700px;
-  width: 40vw;
+  max-width: 500px;
+  width: 30vw;
   display: flex;
   align-self: flex-start;
 }
@@ -339,6 +339,7 @@ h3:hover {
 }
 
 .project-size {
+  max-height: 80vh;
   max-width: 40vw;
   margin: 10px;
   display: flex;
