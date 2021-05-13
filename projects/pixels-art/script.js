@@ -24,6 +24,7 @@ function cleanPixels(event) {
 // adicionar o pixel board
 
 function pixelsColumn(pixelsNumber) {
+  inputSize.value = '';
   const pixelSize = sizeChange.value;
   const pixelBoardChange = parseInt(sizeChange.value) + 2;
   console.log(pixelBoardChange);
@@ -91,7 +92,7 @@ clearBtn.addEventListener('click', () => {
 
 function generateColors() {
   const letters = '0123456789ABCDEF';
-  for (let index = 1; index < color.length; index += 1) {
+  for (let index = 1; index < color.length - 1; index += 1) {
     let colorGenerate = '#';
     for (let index2 = 0; index2 < 6; index2 += 1) {
       colorGenerate += letters[Math.floor(Math.random() * 16)];
@@ -109,4 +110,8 @@ window.onload = generateColors();
 
 sizeChange.addEventListener('click', () => {
   pixelsColumn(boardSize);
-})
+});
+
+sizeChange.addEventListener('touchend', () => {
+  pixelsColumn(boardSize);
+});
