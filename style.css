@@ -172,8 +172,7 @@ body {
   max-width: 900px;
   text-align: right;
   align-self: flex-end;
-  margin: 4em 3em 2em 3em;
-  margin-top: 6em;
+  margin: 13vh 3em 2em 3em;
 }
 
 .arrow2 {
@@ -304,7 +303,7 @@ body {
 }
 
 .project-box {
-  max-height: 80vh;
+  min-height: 60vh;
   max-width: 40vw;
   margin: 10px;
   display: flex;
@@ -399,6 +398,32 @@ body {
   transform: rotate(-45deg) translate(15px, 15px);
 }
 
+@media only screen and (max-width: 1280px) {
+  .title {
+    font-size: 4em;
+  }
+
+  .arrow {
+    margin-top: 2vh;
+  }
+
+  .description {
+    /* margin-top: 0; */
+    font-size: 1.5em;
+  }
+
+  .header.scroll a{
+    padding: 1.3vh 1em;
+  }
+
+  .arrow2 {
+    margin-top: 0;
+  }
+
+  .network-icons {
+    font-size: .8em;
+  }
+}
 
 @media only screen and (max-width: 900px) {
   .project-box {
