@@ -27,13 +27,13 @@ body {
 }
 
 .header a, li {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .header a, li, ul{
   background-color: none;
   list-style-type: none;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   border-radius: 3px;
   color: #e4e4e4;
   transition: color ease-in-out .3s;
@@ -57,7 +57,7 @@ body {
 
 .home {
   position: relative;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   transition: .2s;
   margin-left: 1vw;
   z-index: 1;
@@ -76,7 +76,7 @@ body {
 
 .header.scroll a{
   color: #f3f3f3;
-  padding: 2.2vh 1em;
+  padding: 2.2vh 1rem;
   border-radius: 0px;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .title {
-  font-size: 6em;
+  font-size: 6rem;
   margin-left: 25vw;
   /* margin-bottom: 25vh; */
   width: 60%;
@@ -119,7 +119,7 @@ body {
 
 .arrow {
   margin: 12vh auto 11vh auto;
-  font-size: 4em;
+  font-size: 4rem;
   transition: all ease-in-out .2s;
 }
 
@@ -150,10 +150,10 @@ body {
 }
 
 .resume {
-  font-size: 2.6em;
+  font-size: 2.6rem;
   width: 40%;
   max-width: 950px;
-  margin: 2em;
+  margin: 2rem;
   margin-top: 17vh;
 }
 
@@ -166,18 +166,18 @@ body {
 }
 
 .description {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 300;
   width: 60%;
   max-width: 900px;
   text-align: right;
   align-self: flex-end;
-  margin: 13vh 3em 2em 3em;
+  margin: 13vh 3rem 2rem 3rem;
 }
 
 .arrow2 {
   margin: 8vh auto 11vh auto;
-  font-size: 4em;
+  font-size: 4rem;
   transition: all ease-in-out .2s;
 }
 
@@ -216,14 +216,14 @@ body {
 }
 
 .skills-list h3 {
-  font-size: 1.7em;
+  font-size: 1.7rem;
   color: #e4e4e4;
   margin-bottom: 1em;
 }
 
 .skills-list li{
   color: #e4e4e4;
-  font-size: 1em;
+  font-size: .8rem;
   padding: .3em;
   cursor: default;
 }
@@ -238,7 +238,7 @@ body {
 }
 
 .list-icon {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   transition: .2s;
 }
 
@@ -248,7 +248,7 @@ body {
 
 .arrow3 {
   margin: 2vh auto 15vh auto;
-  font-size: 4em;
+  font-size: 4rem;
   transition: all ease-in-out .2s;
 }
 
@@ -345,7 +345,7 @@ body {
 }
 
 .redes {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 /* burger-menu */
@@ -401,20 +401,28 @@ body {
 
 @media only screen and (max-width: 1280px) {
   .title {
-    font-size: 4em;
+    /* margin-top: 10vh; */
+    margin-left: 10vh;
+    width: 40%;
+    font-size: 4rem;
   }
 
   .arrow {
-    margin-top: 2vh;
+    margin-top: 15vh;
+  }
+
+  .img-container {
+    margin-top: 13vh;
+    
   }
 
   .description {
     /* margin-top: 0; */
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .header.scroll a{
-    padding: 1.3vh 1em;
+    padding: 1.3vh 1rem;
   }
 
   .arrow2 {
@@ -422,7 +430,7 @@ body {
   }
 
   .network-icons {
-    font-size: .8em;
+    font-size: 1.8rem;
   }
 }
 
@@ -451,12 +459,24 @@ body {
   }
 
   .description {
-    margin-top: 4em;
+    margin-top: 10vh;
     font-size: 1.7em;
   }
 
   .arrow2 {
     margin-top: 3vh;
+  }
+
+  .skills-list {
+    width: 80%;
+  }
+
+  .skills-unknown {
+    padding-top: 0;
+  }
+
+  .network-icons {
+    font-size: 2rem;
   }
 
   .menu-btn {
