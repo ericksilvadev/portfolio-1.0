@@ -46,11 +46,11 @@ const change = header.offsetTop;
 
 function headerChange() {
   if (window.pageYOffset > change) {
-    home.classList.add('background');
-    header.classList.add('background');
+    home.classList.add('scroll');
+    header.classList.add('scroll');
   } else {
-    header.classList.remove('background');
-    home.classList.remove('background');
+    header.classList.remove('scroll');
+    home.classList.remove('scroll');
   }
 }
 
