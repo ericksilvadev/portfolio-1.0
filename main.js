@@ -1,3 +1,21 @@
+// // scroll magic
+
+// let controller = new ScrollMagic.Controller();
+
+// let scene = new ScrollMagic.Scene({
+//   triggerElement: '.arrow',
+//   duration: 100,
+//   triggerHook: 0.8,
+//   // reverse: false
+// })
+//     // .setClassToggle('.to-slide', 'right-slide')
+//     .setVelocity('#img', {opacity: 0}, {duration: 1000, easing:'linear'})
+//     .addIndicators({
+//       name: 'img fade'
+//     })
+//     // .setPin ('#home')
+//     .addTo(controller);
+
 // burger menu
 const burgerBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav-container');
@@ -20,3 +38,22 @@ burgerBtn.addEventListener('click', () => {
     active = false;
   }
 });
+
+// change header on scrolling
+
+const header = document.querySelector('header');
+const change = header.offsetTop;
+
+function headerChange() {
+  if (window.pageYOffset > change) {
+    home.classList.add('background');
+    header.classList.add('background');
+  } else {
+    header.classList.remove('background');
+    home.classList.remove('background');
+  }
+}
+
+window.onscroll = () => {
+  headerChange();
+}

@@ -19,10 +19,17 @@ body {
   display: flex;
   position: fixed;
   width: 100vw;
-  background-color: #c4c2d1c9;
+  padding-top: 1em;
+  /* background-color: #c4c2d1c9; */
   height: 8vh;
   z-index: 3;
   justify-content: space-evenly;
+  transition: all ease-in-out .3s;
+}
+
+.header.background {
+  background-color: #c4c2d1c9;
+  padding-top: 0;
 }
 
 .nav {
@@ -49,22 +56,31 @@ ul.nav-menu {
   transition: .3s;
 }
 
-.nav-menu li a:hover {
-  color: #505050;
+.header li a:hover {
+  color: #505050;;
 }
 
 .home{
   position: fixed;
   left: 3vw;
+  margin-top: .6em;
   top: 2vh;
   font-size: 2.2rem;
-  transition: .3s;
+  transition: all ease-in-out .3s;
   color: #232324d8;
   z-index: 4;
 }
 
+.home.background {
+  margin-top: 0;
+}
+
+.home.background:hover {
+  color: #575757;
+}
+
 .home:hover {
-  color: #575757
+  color: #383838;
 }
 
 /* burger-menu */
@@ -163,6 +179,7 @@ ul.nav-menu {
 }
 
 .img {
+  /* opacity: 0; */
   border-radius: 50%;
   max-width: 20vw;
   min-width: 250px;
@@ -171,6 +188,10 @@ ul.nav-menu {
   top: 25vh;
   z-index: 1;
   transition: .3s;
+}
+
+.img.right-slide {
+  transform: translateX(1000px);
 }
 
 .arrow {
@@ -454,8 +475,14 @@ h3:hover {
     top: 460vh
   }
 
+  .title {
+    font-size: 5em;
+    padding-top: .5em;
+  }
+
   .header {
     display: block;
+    padding-top: 0;
   }
 
   .menu-btn {
@@ -466,6 +493,11 @@ h3:hover {
 
   .home {
     font-size: 2.8em;
+    margin-top: 0;
+  }
+
+  .home:hover {
+    color: #232324d8;
   }
 
   .nav-container {
@@ -485,7 +517,7 @@ h3:hover {
     width: 0;
     overflow: hidden;
     transition: .3s;
-    margin-top: 15vh;
+    margin-top: 20vh;
     margin-left: 25%;
     line-height: 10vh;
   }
