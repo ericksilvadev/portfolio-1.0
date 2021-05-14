@@ -469,6 +469,7 @@ body {
 
   .skills-list {
     width: 80%;
+    line-height: 1.7rem;
   }
 
   .skills-unknown {
