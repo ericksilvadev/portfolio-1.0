@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=0.65">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./images/code-outline.svg" />
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
@@ -14,46 +16,45 @@
 </head>
 
 <body>
+  <header class="header" id="header">
+    <div class="home-btn-container">
+      <a href="#home"><em class="fas fa-home home"></em></a>
+    </div>
+    <!-- menu -->
+    <div class="nav-menu-container">
+      <ul class="nav-menu">
+        <li><a href=#about>Sobre</a></li>
+        <li><a href=#skills>Skills</a></li>
+        <li><a href=#projects>Projetos</a></li>
+        <li><a href=#contato>Contato</a></li>
+      </ul>
+    </div>
+    <div class="menu-btn">
+      <div class="burger-btn"></div>
+    </div>
+  </header>
   <div class="front-page" id="home">
-    <a href="#home"><em class="fas fa-home home"></em></a>
-    <header class="header" id="header">
-      <nav>
-        <!-- menu -->
-        <div class="menu-btn">
-          <div class="burger-btn"></div>
-        </div>
-        <div class="nav-container">
-          <ul class="nav-menu">
-            <li><a href=#about>Sobre</a></li>
-            <li><a href=#skills>Skills</a></li>
-            <li><a href=#projects>Projetos</a></li>
-            <li><a href=#contato>Contato</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    <!-- <div class="overlay"></div>
+    <img src="./images/page1.jpg" alt="" class="bg-img"> -->
     <!-- <div class="language">
       <button type="button" class="fas fa-language language-icon btn" onclick='clickLanguage()'></button>
     </div> -->
-    <img src="./images/profile.jpg" alt="uma foto minha de perfil" id="img" class="img to-slide">
-    <h1 id="titulo" class="titulo title to-slide">Olá,<br> <span class="nome"> sou o Erick! </span></h1>
+    <div class="img-container">
+      <img src="./images/profile.jpg" alt="uma foto minha de perfil" id="img" class="img">
+    </div>
+    <h1 id="title" class="title">Olá,<br> <span class="nome"> sou o Erick! </span></h1>
     <div class="arrow">
       <a href="#about">
         <em class="fas fa-chevron-down arrow-icon"></em>
       </a>
     </div>
-    <div class="arrow-mobile">
-      <a href="#home">
-        <em class="fas fa-arrow-circle-up arrow-mobile-icon"></em>
-      </a>
-    </div>
   </div>
   <!-- segunda página -->
-  <div class="second-page" id="about">
-    <h2 class="i-am">Sou um estudande de desenvolvimento web na <a href="https://www.betrybe.com/" target="_blank"
+  <div class="about" id="about">
+    <h2 class="resume">Sou um estudande de desenvolvimento web na <a href="https://www.betrybe.com/" target="_blank"
         class="trybe">Trybe</a></h2>
     <section class="description">
-      <p id="sobre">
+      <p id="description-p">
         Tenho 21 anos, brasileiro nascido em São Paulo e atualmente morando em Goiânia. <strong>Estou estudando
           programação
           na Trybe</strong> desde o dia 05/04/2021. Ao longo da minha formação irei atualizar este portfólio com
@@ -63,42 +64,44 @@
     <div class="arrow2"><a href="#skills"><i class="fas fa-chevron-down arrow-icon2"></i></a></div>
   </div>
   <!-- terceira página -->
-  <div class="third-page" id="skills">
-    <section class="skills-known">
-      <h3 id="skills">Minhas habilidades:</h3>
-      <ul class="lista">
-        <li><em class="fas fa-code-branch icone-lista"></em> Git</li>
-        <li><em class="fab fa-github icone-lista"></em> GitHub</li>
-        <li><em class="fas fa-terminal icone-lista"></em> Unix</li>
-        <li><em class="far fa-comments icone-lista"></em> Comunicação</li>
-        <li><em class="fab fa-html5 icone-lista"></em> HTML</li>
-        <li><em class="fab fa-css3-alt icone-lista"></em> CSS</li>
-        <li><em class="fab fa-js-square icone-lista"></em> JavaScript</li>
-      </ul>
-    </section>
-    <section class="skills-unknown">
-      <h3>O que ainda irei aprender:</h3>
-      <ul class="lista">
-        <li><em class="fab fa-react icone-lista"></em> React</li>
-        <li><em class="fab fa-python icone-lista"></em> Python</li>
-        <li><em class="fab fa-node-js icone-lista"></em> NodeJS</li>
-        <li><em class="fas fa-server icone-lista"></em> SQL</li>
-        <li><em class="fas fa-laptop-code icone-lista"></em> Ciência da computação</li>
-      </ul>
-    </section>
+  <div class="skills" id="skills">
+    <div class="skills-list-container">
+      <section class="skills-known skills-list">
+        <h3>Minhas habilidades:</h3>
+        <ul class="list">
+          <li><em class="fas fa-code-branch list-icon"></em> Git</li>
+          <li><em class="fab fa-github list-icon"></em> GitHub</li>
+          <li><em class="fas fa-terminal list-icon"></em> Unix</li>
+          <li><em class="far fa-comments list-icon"></em> Comunicação</li>
+          <li><em class="fab fa-html5 list-icon"></em> HTML</li>
+          <li><em class="fab fa-css3-alt list-icon"></em> CSS</li>
+          <li><em class="fab fa-js-square list-icon"></em> JavaScript</li>
+        </ul>
+      </section>
+      <section class="skills-unknown skills-list">
+        <h3>O que ainda irei aprender:</h3>
+        <ul class="list">
+          <li><em class="fab fa-react list-icon"></em> React</li>
+          <li><em class="fab fa-python list-icon"></em> Python</li>
+          <li><em class="fab fa-node-js list-icon"></em> NodeJS</li>
+          <li><em class="fas fa-server list-icon"></em> SQL</li>
+          <li><em class="fas fa-laptop-code list-icon"></em> Ciência da computação</li>
+        </ul>
+      </section>
+    </div>
     <div class="arrow3"><a href="#projects"><i class="fas fa-chevron-down arrow-icon3"></i></a></div>
   </div>
   <!-- quarta pagina -->
   <div class="fourth-page" id="projects">
     <h3>Aqui estão alguns dos meus projetos:</h3>
     <div class="projects">
-      <div class="todo-list project-size">
+      <div class="todo-list project-box">
         <h4>Lista de tarefas</h4>
         <a href="./projects/todo-list/" target="_blank" rel="noopener noreferrer"><img class="project-img"
             src="/projects/todo-list/todo-list2.jpeg" alt="screenshot do meu projeto 'lista de tarefas'"></a>
         <p class="project-description">Neste projeto criei uma lista de tarefas dinâmica em que os itens podem ser adicionados, excluídos, trocados de posição e salvos para serem vistos da mesma maneira em uma nova visita à página. Um conceito aparentemente simples mas que exige um bom conhecimento de HTML, CSS e JavaScript.</p>
       </div>
-      <div class="pixels-art project-size">
+      <div class="pixels-art project-box">
         <h4>Arte com pixels</h4>
         <a href="./projects/pixels-art/" target="_blank" rel="noopener noreferrer"><img class="project-img"
             src="/projects/pixels-art/pixels-art2.png" alt="screenshot do meu projeto 'arte com pixels'"></a>
@@ -109,21 +112,22 @@
     <footer class="footer">
       <section class="contato">
         <div class="redes" id="contato">
-          <a href="https://github.com/ericksilvadev" target="_blank"><i class="fab fa-github icones-redes"></i></a>
+          <a href="https://github.com/ericksilvadev" target="_blank"><i class="fab fa-github network-icons"></i></a>
           <a href="https://www.linkedin.com/in/ericksilvadev/" target="_blank"><i
-              class="fab fa-linkedin icones-redes"></i></a>
+              class="fab fa-linkedin network-icons"></i></a>
           <a href="https://www.instagram.com/ericksilvadev/" target="_blank"><i
-              class="fab fa-instagram icones-redes"></i></a>
-          <a href="mailto:erick.silva6653@gmail.com"><i class="fas fa-envelope icones-redes"></i></a>
+              class="fab fa-instagram network-icons"></i></a>
+          <a href="mailto:erick.silva6653@gmail.com"><i class="fas fa-envelope network-icons"></i></a>
         </div>
       </section>
       <p>&#169; Erick Silva 2021</p>
     </footer>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.velocity.min.js" integrity="sha512-ulK7pbTIY9j6WjPyRImdSqhubR5JN+KRrpCCSalyjqImnZeloOHjVLuMVux4QHte+dtApVNFJDYO4FTCvLa8yA==" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+  <script src="main.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/jquery.ScrollMagic.min.js" integrity="sha512-RoCOXSeYXosX4PjvRhUz0X+pmdhOJJkbjYZzmZ9dS1Iy9E/WnkTqMy+LVkPX3BV0ZgSFB2AYQKfi6ZKdNdXJnQ==" crossorigin="anonymous"></script> -->
 </body>
 
