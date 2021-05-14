@@ -544,41 +544,4 @@ h3:hover {
   .home.active {
     color: #cfcfcf;
   }
-
-/* .header {
-    text-align: right;
-  }
-  
-  .btn {
-    border: none;
-    background: none;
-  }
-  
-  .btn:hover {
-    overflow: visible;
-  }
-  
-  .hamburguer-menu {
-    margin-right: 3vw;
-    position: fixed;
-    float: right;
-    margin-top: 2vh;
-    margin-left: 2vw;
-    right: 2vw;
-  }
-  
-  ul.nav-menu {
-    display: block;
-    overflow: hidden;
-    height: 0px;
-    background-color: #c4c2d1c9;
-    width: 45vw;
-    float: right;
-    margin-top: 8vh;
-  }
-  li.nav {
-    float: none;
-  }
-}   */
-
 }
