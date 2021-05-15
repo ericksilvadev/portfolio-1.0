@@ -28,17 +28,24 @@ body {
 
 .header a, li {
   padding: 1rem;
+  margin: 0 1vw;
 }
 
 .header a, li, ul{
   background-color: none;
   list-style-type: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   border-radius: 3px;
   color: #e4e4e4;
   transition: color ease-in-out .3s;
   transition: all ease-in .1s;
 }
+
+/* .header ul {
+  display: flex;
+  min-width: 20%;
+  justify-content: space-evenly;
+} */
 
 .header li a:hover{
   background-color: #0f0f0fdc;
@@ -57,7 +64,7 @@ body {
 
 .home {
   position: relative;
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: .2s;
   margin-left: 1vw;
   z-index: 1;
@@ -76,7 +83,7 @@ body {
 
 .header.scroll a{
   color: #f3f3f3;
-  padding: 2.2vh 1rem;
+  padding: 2.6vh 1rem;
   border-radius: 0px;
 }
 
@@ -223,7 +230,7 @@ body {
 
 .skills-list li{
   color: #e4e4e4;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: .3em;
   cursor: default;
 }
