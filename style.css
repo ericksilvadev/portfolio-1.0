@@ -225,7 +225,7 @@ body {
 .skills {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background-image: url(./images/lampada.jpg);
   background-size: cover;
@@ -234,19 +234,18 @@ body {
   justify-content: flex-end;
 }
 
-.skills-list-contrainer {
-  /* display: flex; */
+.skills-list-container {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
   flex: 1;
   width: 40%;
 }
 
 .skills-list {
-  padding: 1.5em;
-  line-height: 2.2rem;
-  margin-left: 5vw;
-
+  margin-left: 10vw;
+  line-height: 4vh;
 }
 
 .skills-list h3 {
@@ -262,9 +261,9 @@ body {
   cursor: default;
 }
 
-/* .skills-known {
+.skills-known {
   margin-top: 9vh;
-} */
+}
 
 .skills-unknown {
   padding-bottom: 0;
@@ -284,7 +283,7 @@ body {
   /* align-self: flex-end; */
   display: flex;
   align-items: flex-start;
-  margin: 5vh auto 2vh auto;
+  margin: 5vh auto 11vh auto;
   font-size: 4rem;
   transition: all ease-in-out .2s;
 }
@@ -440,13 +439,13 @@ body {
 @media only screen and (max-width: 1280px) {
   .title {
     /* margin-top: 10vh; */
-    margin-left: 10vh;
-    width: 40%;
+    /* margin-left: 10vh; */
+    width: 90%;
     font-size: 4rem;
   }
 
   .arrow {
-    margin-top: 15vh;
+    margin: 0 auto 11vh auto;
   }
 
   /* .img-container {
@@ -457,6 +456,7 @@ body {
   .description {
     /* margin-top: 0; */
     font-size: 1.5rem;
+    height: 23%;
   }
 
   .header.scroll a{
@@ -469,6 +469,26 @@ body {
 
   .network-icons {
     font-size: 1.8rem;
+  }
+
+  .skills-list h3 {
+    font-size: 1.4rem;
+  }
+
+  .skills-list li {
+    font-size: .8rem;
+  }
+
+  .skills-unknown {
+    padding-top: 0;
+  }
+
+  .list-icon {
+    font-size: 1.4rem;
+  }
+
+  .arrow3, .arrow2, .arrow {
+    margin: 0 auto 9vh auto;
   }
 }
 
