@@ -570,9 +570,13 @@ body {
     line-height: 4vh;
   }
 
-  /* .skills-unknown {
-    padding-top: 0;
-  } */
+  .skills-list li {
+    font-size: 1rem;
+  }
+
+  .skills-unknown {
+    padding-top: 3vh;
+  }
 
   .network-icons {
     font-size: 2rem;
