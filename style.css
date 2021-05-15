@@ -490,6 +490,10 @@ body {
   .arrow3, .arrow2, .arrow {
     margin: 0 auto 9vh auto;
   }
+
+  .arrow2 {
+    margin-bottom: 11vh;
+  }
 }
 
 /* mobile */
@@ -505,7 +509,7 @@ body {
   }
 
   .title {
-    width: 80%;
+    width: 100%;
   }
 
   .title-txt {
@@ -524,7 +528,9 @@ body {
 
   .resume {
     font-size: 2.3em;
-    width: 50%;
+    width: 80%;
+    align-items: center;
+    margin: 0 0 0 8vw;
   }
 
   .description {
@@ -532,9 +538,21 @@ body {
     font-size: 1.8em;
     width: 90%;
   }
+  
+  .arrow, .arrow2, .arrow3 {
+    margin: 0 auto 12vh auto;
+  }
+
+  .arrow {
+    margin-top: 8vh;
+  }
 
   .arrow2 {
     margin-top: 3vh;
+  }
+
+  .skills-list-container {
+    width: 90%;
   }
 
   .skills-list {
