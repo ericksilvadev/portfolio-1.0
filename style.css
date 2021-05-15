@@ -194,11 +194,11 @@ body {
   font-size: 1.8rem;
   font-weight: 300;
   width: 60%;
-  height: 35%;
+  height: 45%;
   max-width: 900px;
   text-align: right;
   align-self: flex-end;
-  margin: 13vh 3rem 2rem 3rem;
+  margin: 0vh 3rem 2rem 3rem;
 }
 
 .arrow2 {
@@ -436,6 +436,16 @@ body {
   transform: rotate(-45deg) translate(15px, 15px);
 }
 
+@media only screen and (max-width: 1440px) {
+  .header.scroll a{
+    padding: 2.2vh 1rem;
+  }
+
+  .description {
+    height: 40%;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   .title {
     /* margin-top: 10vh; */
@@ -456,11 +466,11 @@ body {
   .description {
     /* margin-top: 0; */
     font-size: 1.5rem;
-    height: 23%;
+    height: 35%;
   }
 
   .header.scroll a{
-    padding: 1.3vh 1rem;
+    padding: 1.6vh 1rem;
   }
 
   .arrow2 {
@@ -534,7 +544,7 @@ body {
   }
 
   .description {
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     font-size: 1.8em;
     width: 90%;
   }
