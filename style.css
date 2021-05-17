@@ -114,7 +114,7 @@ body {
 }
 
 .img {
-  min-width: 250px;
+  min-width: 200px;
   max-width: 15vw;
   border-radius: 50%;
   filter: brightness(95%);
@@ -303,7 +303,7 @@ body {
 
 /* projects page */
 
-.fourth-page {
+.projects-page {
   width: 100%;
   min-height: 105vh;
   background-color: #dbdbdb;
@@ -312,7 +312,7 @@ body {
   flex-direction: column;
 }
 
-.fourth-page h3 {
+.projects-page h3 {
   font-size: 2.1rem;
   padding-top: 10vh;
   padding-bottom: 5vh;
@@ -329,6 +329,7 @@ body {
 .projects {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
 }
 
@@ -390,7 +391,7 @@ body {
   height: 40px;
   width: 40px;
   margin: 2vh;
-  padding-right: 1vh;
+  /* padding-right: 1vh; */
   display: none;
   align-items: center;
   justify-content: center;
@@ -398,8 +399,8 @@ body {
 }
 
 .burger-btn {
-  width: 40px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   border-radius: 5px;
   background-color: #e4e4e4;
   transition: all ease-in-out .3s;
@@ -408,19 +409,19 @@ body {
 .burger-btn::before, .burger-btn::after {
   content: '';
   position: absolute;
-  width: 40px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   border-radius: 5px;
   background-color: #e4e4e4;
   transition: all ease-in-out .3s;
 }
 
 .burger-btn::before {
-  transform: translateY(-13px);
+  transform: translateY(-10px);
 }
 
 .burger-btn::after {
-  transform: translateY(13px);
+  transform: translateY(10px);
 }
 
 .menu-btn.active .burger-btn{
@@ -436,7 +437,7 @@ body {
   transform: rotate(-45deg) translate(15px, 15px);
 }
 
-@media only screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .header.scroll a{
     padding: 2.2vh 1rem;
   }
@@ -446,7 +447,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .title {
     /* margin-top: 10vh; */
     /* margin-left: 10vh; */
@@ -508,84 +509,13 @@ body {
 
 /* mobile */
 
-@media only screen and (max-width: 900px) {
-  .project-box {
-    min-width: 80vw;
-    background-color: #b1b1b152;
-  }
-
-  .home {
-    font-size: 2.4rem;
-  }
-
-  .title {
-    width: 100%;
-  }
-
-  .title-txt {
-    /* margin-top: 1em; */
-    font-size: 5rem;
-  }
-
-  .arrow {
-    margin-top: 8vh;
-  }
-
-  .img-container {
-    width: 90%;
-    /* padding-right: 20%; */
-  }
-
-  .resume {
-    font-size: 2.3em;
-    width: 80%;
-    align-items: center;
-    margin: 0 0 0 8vw;
-  }
-
-  .description {
-    /* margin-top: 10vh; */
-    font-size: 1.8em;
-    width: 90%;
-  }
-  
-  .arrow, .arrow2, .arrow3 {
-    margin: 0 auto 12vh auto;
-  }
-
-  .arrow {
-    margin-top: 8vh;
-  }
-
-  .arrow2 {
-    margin-top: 3vh;
-  }
-
-  .skills-list-container {
-    width: 90%;
-  }
-
-  .skills-list {
-    width: 80%;
-    line-height: 4vh;
-  }
-
-  .skills-list li {
-    font-size: 1rem;
-  }
-
-  .skills-unknown {
-    padding-top: 3vh;
-  }
-
-  .network-icons {
-    font-size: 2rem;
-  }
+@media screen and (max-width: 768px) {
+  /* burger menu */
 
   .menu-btn {
     display: flex;
   }
-
+  
   .nav-menu-container {
     width: 0;
     display: flex;
@@ -611,11 +541,135 @@ body {
     transition: 1s;
   }
 
+  .nav-menu li a{
+    font-size: 1.2rem;
+  }
+
   .nav-menu.display {
     opacity: 1;
   }
+  
+  /* home page */
+  
+  .home {
+    font-size: 1.8rem;
+  }
+  
+  .title {
+    width: 100%;
+  }
+  
+  .title-txt {
+    /* margin-top: 1em; */
+    font-size: 3rem;
+  }
+  
+  .arrow {
+    margin-top: 8vh;
+  }
+  
+  .img-container {
+    width: 90%;
+    /* padding-right: 20%; */
+  }
+  
+  .arrow {
+    margin-top: 8vh;
+  }
+  
+  /* about page */
+  
+  .resume {
+    /* font-size: 1rem; */
+    width: 80%;
+    align-items: center;
+    margin: 0 0 0 8vw;
+  }
+  
+  .resume-txt {
+    font-size: 1.7rem;
+  }
+  
+  .description {
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .description-p {    
+    font-size: 1.2rem;
+  }
+  
+  .arrow, .arrow2, .arrow3 {
+    font-size: 3rem;
+    margin: 0 auto 12vh auto;
+  }
+  
+  /* skills page */
+  
+  .skills-list-container {
+    width: 90%;
+  }
+  
+  .skills-list {
+    width: 100%;
+    line-height: 4vh;
+  }
+  
+  .skills-list li {
+    font-size: .8rem;
+  }
+  
+  .skills-list li em {
+    font-size: 1.3rem;
+  }
+  
+  .skills-list h3 {
+    font-size: 1.3rem;
+  }
+  
+  .skills-unknown {
+    padding-top: 3vh;
+  }
 
-  .home.active {
-    color: #e4e4e4;
+  /* projects page */
+
+  .projects-page {
+    align-items: center;
+  }
+  
+  .projects-page h3 {
+    font-size: 1.5rem;
+  }
+  
+  .project-box {
+    min-width: 80vw;
+    background-color: #b1b1b152;
+  }
+
+  .project-box p{
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .project-box a img {
+    width: 60%;
+    margin: auto;
+  }
+
+  .project-box h4 {
+    font-size: 1.3rem;
+  }
+
+  .network-icons {
+    font-size: 1.6rem;
+  }
+
+  .footer p{
+    font-size: .8rem;
   }
 }
+
+/* @media screen and (max-width:) {
+  
+} */
