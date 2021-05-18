@@ -445,11 +445,11 @@ body {
 }
 
 .menu-btn.active .burger-btn::before {
-  transform: rotate(45deg) translate(15px, -15px);
+  transform: rotate(45deg) translate(18px, -18px);
 }
 
 .menu-btn.active .burger-btn::after {
-  transform: rotate(-45deg) translate(15px, 15px);
+  transform: rotate(-45deg) translate(18px, 18px);
 }
 
 @media screen and (max-width: 1440px) {
