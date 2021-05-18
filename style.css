@@ -454,11 +454,23 @@ body {
 
 @media screen and (max-width: 1440px) {
   .header.scroll a{
-    padding: 2.2vh 1rem;
+    padding: 2.3vh 1rem;
   }
 
   .description {
     height: 40%;
+  }
+
+  .project-box p {
+    font-size: 1rem;
+  }
+
+  .network-icons {
+    font-size: 2rem;
+  }
+
+  .footer p {
+    font-size: .9rem;
   }
 }
 
@@ -469,6 +481,10 @@ body {
     padding: 2vh 1rem;
   }
 
+  .home {
+    font-size: 2rem;
+  }
+
   /* home page */
 
   .title-txt {
@@ -476,6 +492,10 @@ body {
   }
 
   /* about-page */
+
+  .resume-txt {
+    font-size: 2rem;
+  }
 
   .description-p {
     font-size: 1.6rem;
@@ -521,11 +541,15 @@ body {
     font-size: .9rem;
   }
 
+  .arrow, .arrow2, .arrow3 {
+    font-size: 3rem;
+  }
+
 }
 
 /* mobile */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   /* burger menu */
 
   .menu-btn {
@@ -555,6 +579,7 @@ body {
     line-height: 13vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     transition: 1s;
   }
 
@@ -569,7 +594,7 @@ body {
   /* home page */
   
   .home {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
   
   .title {
@@ -611,6 +636,7 @@ body {
     width: 90%;
     display: flex;
     align-items: flex-end;
+    margin-right: 7vw;
   }
   
   .description-p {    
