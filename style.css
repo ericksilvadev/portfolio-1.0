@@ -445,11 +445,11 @@ body {
 }
 
 .menu-btn.active .burger-btn::before {
-  transform: rotate(45deg) translate(15px, -15px);
+  transform: rotate(45deg) translate(18px, -18px);
 }
 
 .menu-btn.active .burger-btn::after {
-  transform: rotate(-45deg) translate(15px, 15px);
+  transform: rotate(-45deg) translate(18px, 18px);
 }
 
 @media screen and (max-width: 1440px) {
@@ -591,14 +591,15 @@ body {
     opacity: 1;
   }
   
-  /* home page */
-  
   .home {
     font-size: 1.8rem;
   }
   
+  /* home page */
+  
   .title {
     width: 100%;
+    align-items: flex-start;
   }
   
   .title-txt {
@@ -607,12 +608,17 @@ body {
   }
   
   .arrow {
-    margin-top: 8vh;
+    margin-top: 10vh;
   }
   
   .img-container {
     width: 90%;
+    align-items: center;
     /* padding-right: 20%; */
+  }
+
+  .img {
+    margin-top: 12vh;
   }
   
   .arrow {
@@ -660,11 +666,11 @@ body {
   }
   
   .skills-list li {
-    font-size: .8rem;
+    font-size: .7rem;
   }
   
   .skills-list li em {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .skills-list h3 {
