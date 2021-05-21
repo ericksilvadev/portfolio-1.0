@@ -10,6 +10,7 @@ function createRate() {
     label.setAttribute('for', index);
     label.innerHTML = `${index} `;
     label.classList.add('form-check-label');
+    div.classList.add('rate-container')
     radioBtn.setAttribute('type', 'radio');
     radioBtn.setAttribute('data-validate-field', 'radio');
     radioBtn.id = index;
@@ -54,7 +55,7 @@ agreement.addEventListener('click', activeBtn);
 const loginBtn = document.querySelector('.login-btn');
 const login = document.querySelector('#login');
 const pass = document.querySelector('#password');
-const emailValid = /\w+@\w+\.com/;
+const emailValid = /\w{5,15}/;
 const passValid = /\w{8,20}/;
 
 loginBtn.addEventListener('click', () => {
@@ -184,9 +185,7 @@ new window.JustValidate('.js-form', {
       required: true,
     },
   },
-  // messages: {
 
-  // }
   submitHandler: function (form, values, ajax) {
     ajax({
         url: 'https://just-validate-api.herokuapp.com/submit',
@@ -201,4 +200,27 @@ new window.JustValidate('.js-form', {
         }
     });
 },
+});
+
+// login on mobile 
+
+const loginIcon = document.querySelector('.login-icon');
+const loginField = document.querySelector('.login-field');
+const logo = document.querySelector('.logo');
+let active = false;
+
+loginIcon.addEventListener('click', () => {
+  if (!active) {
+    active = true
+    console.log(active);
+    loginField.classList.add('active');
+    loginIcon.classList.add('active');
+    logo.classList.add('active');
+  } else {
+    active = false
+    console.log(active);
+    loginField.classList.remove('active');
+    loginIcon.classList.remove('active');
+    logo.classList.remove('active');
+  }
 });
