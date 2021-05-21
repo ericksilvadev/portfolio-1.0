@@ -702,12 +702,16 @@ body {
   }
 
   .project-box a img {
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
 
   .project-box h4 {
     font-size: 1.3rem;
+  }
+
+  .trybewarts a img {
+    width: 90%
   }
 
   .network-icons {
@@ -718,7 +722,3 @@ body {
     font-size: .8rem;
   }
 }
-
-/* @media screen and (max-width:) {
-  
-} */
