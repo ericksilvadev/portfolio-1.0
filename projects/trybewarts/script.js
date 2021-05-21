@@ -228,5 +228,5 @@ loginIcon.addEventListener('click', () => {
 // reload window
 
 logo.addEventListener('click', () => {
-  location.reload()
+  location.reload();
 });
