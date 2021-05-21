@@ -254,10 +254,11 @@ footer {
     margin: 0;
     padding: 0;
     position: absolute;
+    top: .8em;
+    left: 1em;
   }
 
   .header {
-    padding: 10px 1em 20px 1em;
     height: auto;
   }
 
@@ -275,7 +276,6 @@ footer {
   .login-icon {
     display: block;
     font-size: 1.8rem;
-    margin-right: 10px;
     opacity: .8;
     position: absolute;
     right: 1rem;
@@ -307,7 +307,7 @@ footer {
   }
 
   .login-field.active {
-    height: 35%;
+    height: 40%;
   }
 
   .login-input {
