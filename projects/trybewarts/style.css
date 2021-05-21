@@ -307,7 +307,7 @@ footer {
   }
 
   .login-field.active {
-    height: 40%;
+    height: 240px;
   }
 
   .login-input {
@@ -315,6 +315,10 @@ footer {
     margin: 1.3em;
     padding: 5px;
     background-color: rgb(212, 212, 212);
+  }
+
+  .login-input:nth-child(1) {
+    margin-top: 200px;
   }
 
   .login-btn {

@@ -212,13 +212,11 @@ let active = false;
 loginIcon.addEventListener('click', () => {
   if (!active) {
     active = true
-    console.log(active);
     loginField.classList.add('active');
     loginIcon.classList.add('active');
     logo.classList.add('active');
   } else {
     active = false
-    console.log(active);
     loginField.classList.remove('active');
     loginIcon.classList.remove('active');
     logo.classList.remove('active');
