@@ -269,7 +269,7 @@ footer {
     display: block;
     font-size: 1.8rem;
     margin-right: 10px;
-    opacity: .7;
+    opacity: .8;
     position: absolute;
     right: 1rem;
     top: 6px;
@@ -285,6 +285,7 @@ footer {
 
   .login-field {
     width: 100%;
+    max-width: 100%;
     position: absolute;
     flex-direction: column;
     top: 0vh;
@@ -299,7 +300,7 @@ footer {
   }
 
   .login-field.active {
-    height: 30%;
+    height: 35%;
   }
 
   .login-input {

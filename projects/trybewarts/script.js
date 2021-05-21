@@ -224,3 +224,9 @@ loginIcon.addEventListener('click', () => {
     logo.classList.remove('active');
   }
 });
+
+// reload window
+
+logo.addEventListener('click', () => {
+  location.reload()
+});
