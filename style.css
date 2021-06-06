@@ -16,7 +16,7 @@ body {
 /* nav bar */
 
 .header {
-  height: 9vh;
+  height: 90px;
   width: 100%;
   position: fixed;
   display: flex;
@@ -82,12 +82,16 @@ body {
 
 .header.scroll {
   background-color: #0f0f0fdc;
-  height: 8vh;
+  height: 75px;
 }
+
+/* .blur {
+  backdrop-filter: blur(7px);
+} */
 
 .header.scroll a{
   color: #f3f3f3;
-  padding: 2.6vh 1rem;
+  padding: 23px 16px;
   border-radius: 0px;
 }
 
@@ -442,9 +446,9 @@ body {
 }
 
 @media screen and (max-width: 1440px) {
-  .header.scroll a{
+  /* .header.scroll a{
     padding: 2.3vh 1rem;
-  }
+  } */
 
   .description {
     height: 40%;
@@ -466,8 +470,12 @@ body {
 /* 720p */
 
 @media screen and (max-width: 1280px) and (max-height: 720px){
+  .header.scroll {
+    height: 60px;
+  }
+  
   .header.scroll a{
-    padding: 1.8vh 1rem;
+    padding: 15px 16px;
   }
 
   .home {
@@ -539,8 +547,15 @@ body {
 /* mobile */
 
 @media screen and (max-width: 760px) {
-  /* burger menu */
+  /* header */
 
+  .header.scroll {
+    height: 60px;
+  }
+
+  
+  /* burger menu */
+  
   .menu-btn {
     display: flex;
   }
@@ -557,6 +572,7 @@ body {
     height: 100vh;
     background-color: #111111e1;
     transition: ease-in-out .3s;
+    /* backdrop-filter: blur(7px); */
   }
 
   .nav-menu-container.display {
