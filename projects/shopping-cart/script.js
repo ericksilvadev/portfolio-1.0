@@ -26,8 +26,11 @@ const formatter = new Intl.NumberFormat('pt-BR', {
 });
 
 function cartItemClickListener(event) {
+  if (!event.target.classList.value) { 
+    event.target.parentElement.remove(); 
+    saveCart(event.target.parentElement.id);
+  }
   event.target.remove();
-  // if (cartIds.length === 1) { localStorage.removeItem('cartStorage'); }
   saveCart(event.target.id);
 }
 
@@ -64,7 +67,6 @@ const addProduct = (id) => new Promise((resolve, reject) => {
 
 const addToCart = (evt) => {
 const item = evt.target.parentElement;
-console.log(item);
 const id = getSkuFromProductItem(item);
 saveIds(id);
 addProduct(id);
