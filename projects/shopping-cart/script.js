@@ -3,6 +3,9 @@ const emptyCart = document.querySelector('.empty-cart');
 const totalPrice = document.querySelector('.total-price');
 const searchBar = document.querySelector('.search');
 const searchBtn = document.querySelector('.search-btn');
+const title = document.querySelector('.title');
+const cartIcon = document.querySelector('.cart-icon');
+const cart = document.querySelector('.cart');
 let total = 0;
 const cartItems = document.querySelector('.cart__items');
 let cartIds = [];
@@ -96,6 +99,7 @@ emptyCart.addEventListener('click', () => {
   total = 0;
   totalPrice.innerHTML = formatter.format(total);
   localStorage.clear();
+  localStorage.setItem('lastSearch', lastSearch);
 });
 
 function createCustomElement(element, className, innerText) {
@@ -145,24 +149,39 @@ const generateProductList = async (search) => {
 
 window.onload = async () => {
   loadCart();
-  if (!lastSearch) {
+  if (!localStorage.lastSearch) {
     const products = await getProduct();
     return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
   } else {
+    lastSearch = localStorage.lastSearch;
     generateProductList(localStorage.lastSearch);
   }
 };
 
-searchBar.addEventListener('keyup', (evt) => {
+searchBar.addEventListener('keyup', async (evt) => {
   if (evt.key === 'Enter') {
+    if (!searchBar.value) { return; }
     itemsList.innerHTML = '';
     lastSearch = searchBar.value;
     saveCart();
     generateProductList(searchBar.value);
+    searchBtn.classList.remove('active');
+    searchBar.classList.remove('active');
+    title.classList.remove('active');
   }
 })
 
 searchBtn.addEventListener('click', async () => {
+  if (searchBtn.classList.contains('active')) {
+    searchBtn.classList.remove('active');
+    searchBar.classList.remove('active');
+    title.classList.remove('active');
+  } else {
+    searchBtn.classList.add('active');
+    searchBar.classList.add('active');
+    title.classList.add('active');
+  }
+  if (!searchBar.value) { return; }
   itemsList.innerHTML = '';
   lastSearch = searchBar.value;
   saveCart();
@@ -172,3 +191,10 @@ searchBtn.addEventListener('click', async () => {
   // console.log(searchBar.value);
   // return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
 })
+
+// open cart mobile
+
+cartIcon.addEventListener('click',  () => {
+  cartIcon.classList.toggle('active')
+  cart.classList.toggle('active');
+});
