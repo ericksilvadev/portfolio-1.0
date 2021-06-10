@@ -265,6 +265,10 @@ span.item__title {
   content: 'Total: ';
 }
 
+.cart-icon-container {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     overflow: hidden;
@@ -341,6 +345,7 @@ span.item__title {
 
   .cart-icon-container {
     position: fixed;
+    display: block;
     right: 23px;
     bottom: 23px;
     font-size: 30px;
