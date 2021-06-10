@@ -96,6 +96,7 @@ emptyCart.addEventListener('click', () => {
   total = 0;
   totalPrice.innerHTML = formatter.format(total);
   localStorage.clear();
+  localStorage.setItem('lastSearch', lastSearch);
 });
 
 function createCustomElement(element, className, innerText) {
@@ -145,10 +146,11 @@ const generateProductList = async (search) => {
 
 window.onload = async () => {
   loadCart();
-  if (!lastSearch) {
+  if (!localStorage.lastSearch) {
     const products = await getProduct();
     return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
   } else {
+    lastSearch = localStorage.lastSearch;
     generateProductList(localStorage.lastSearch);
   }
 };
