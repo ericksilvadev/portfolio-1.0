@@ -289,13 +289,14 @@ span.item__title {
   
   .search {
     width: 0;
-    opacity: 0;
+    /* opacity: 0; */
     align-self: flex-end;
-    transition: all ease-in-out .7s;
+    transition: width ease-in-out .7s;
+    padding: 15px 0px;
   }
 
   .search.active {
-    opacity: 1;
+    /* opacity: 1; */
     padding: 15px;
     width: 85vw;
     /* transform: translateX(-100px); */
@@ -305,13 +306,14 @@ span.item__title {
     font-size: 22px;
     background: none;
     position: absolute;
+    top: 17px;
     padding: 10px;
     margin-right: 10px;
   }
 
-  .search-btn.active {
+  /* .search-btn.active {
     background-color: white;
-  }
+  } */
 
   .container {
     overflow: hidden;
