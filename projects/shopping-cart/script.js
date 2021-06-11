@@ -88,9 +88,15 @@ const loadCart = () => {
 };
 
 function createProductImageElement(imageSource) {
-  const img = document.createElement('img');
+  const img = document.createElement('div');
+  img.style.width = '100%';
+  img.style.height = '200px';
+  img.style.backgroundSize = 'contain';
+  img.style.backgroundPosition = 'center'
+  img.style.backgroundRepeat = 'no-repeat'
   img.className = 'item__image';
-  img.src = imageSource;
+  img.style.backgroundImage = `url(${imageSource})`;
+  // img.src = imageSource;
   return img;
 }
 
