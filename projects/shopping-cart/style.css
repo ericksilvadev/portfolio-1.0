@@ -362,7 +362,7 @@ span.item__title {
   .item {
     width: 47%;
     min-height: 300px;
-    max-height: 400px;
+    /* max-height: 400px; */
   }
 
   .item__image {
@@ -382,8 +382,9 @@ span.item__title {
     font-size: 10px;
   }
 
-  .item__title {
+  span.item__title {
     font-size: 14px;
+    width: 100%;
   }
 
   .item .item__add {
