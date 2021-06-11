@@ -348,7 +348,7 @@ span.item__title {
     display: block;
     right: 23px;
     bottom: 23px;
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(49, 49, 49);
   }
 
@@ -356,6 +356,7 @@ span.item__title {
     width: 100%;
     flex-basis: 100%;
     flex-direction: row;
+    margin-top: 4px;
   }
   
   .item {
