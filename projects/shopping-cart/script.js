@@ -187,7 +187,7 @@ searchBtn.addEventListener('click', async () => {
     searchBar.classList.add('active');
     title.classList.add('active');
   }
-  if (!searchBar.value) { return; }
+  if (!searchBar.value || searchBar.value === localStorage.lastSearch) { return; }
   itemsList.innerHTML = '';
   lastSearch = searchBar.value;
   saveCart();
