@@ -320,23 +320,25 @@ span.item__title {
   }
   
   .cart {
-    right: -150vw;
+    /* right: -150vw; */
+    width: 0;
     top: 0;
     height: 100vh;
     /* overflow: hidden; */
     position: fixed;
     /* opacity: 0; */
     padding: 5vh 0px;
-    transition: all ease-in-out .7s;
+    transition: all ease-in-out 1s;
+    right: -100vw;
   }
-
+  
   .cart.active {
     right: 0;
     width: 100vw;
     /* opacity: 1; */
-    transform: translateX(0px);
+    /* transform: translateX(50vw); */
     display: flex;
-    transition: all ease-in-out .7s;
+    /* transition: all ease-in-out .7s; */
   }
 
   .cart__title {
