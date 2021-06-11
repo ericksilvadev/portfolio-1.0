@@ -365,14 +365,14 @@ span.item__title {
     /* max-height: 400px; */
   }
 
-  .item__image {
-    /* width: 100%;
+  /* .item__image {
+    width: 100%;
     height: 200px;
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat; */
-    /* max-width: 90%; */
-  }
+    background-repeat: no-repeat;
+    max-width: 90%;
+  } */
 
   .price {
     font-size: 16px;
@@ -382,9 +382,10 @@ span.item__title {
     font-size: 10px;
   }
 
-  span.item__title {
+  .item .item__title {
+    padding: 8px;
     font-size: 14px;
-    width: 100%;
+    width: 95%;
   }
 
   .item .item__add {
