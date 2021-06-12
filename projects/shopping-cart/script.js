@@ -5,7 +5,9 @@ const searchBar = document.querySelector('.search');
 const searchBtn = document.querySelector('.search-btn');
 const title = document.querySelector('.title');
 const cartIcon = document.querySelector('.cart-icon');
+const cartItemsQuantity = document.querySelector('.items-quantity');
 const cart = document.querySelector('.cart');
+const cartItemsList = document.querySelector('.cart__items');
 let total = 0;
 const cartItems = document.querySelector('.cart__items');
 let cartIds = [];
@@ -28,6 +30,19 @@ const formatter = new Intl.NumberFormat('pt-BR', {
   currency: 'BRL',
 });
 
+// update cart items quantity
+
+const totalCartQuantity = async () => {
+  const itemsQuantity = cartItemsList.children.length;
+  if (itemsQuantity === 0) { 
+    cartItemsQuantity.style.display = 'none'
+  } else {
+    cartItemsQuantity.style.display = 'block'
+    cartItemsQuantity.innerText = itemsQuantity;
+    console.log(itemsQuantity);
+  }
+};
+
 function cartItemClickListener(event) {
   if (!event.target.classList.value) { 
     event.target.parentElement.remove(); 
@@ -35,6 +50,7 @@ function cartItemClickListener(event) {
   }
   event.target.remove();
   saveCart(event.target.id);
+  totalCartQuantity();
 }
 
 function getSkuFromProductItem(item) {
@@ -65,6 +81,7 @@ const addProduct = (id) => new Promise((resolve, reject) => {
   .then((result) => result.json())
   .then((resultJson) => resolve(cartItems.appendChild(createCartItemElement(resultJson))))
   .then(() => saveCart())
+  .then(() => totalCartQuantity())
   .catch((err) => reject(err));
 });
 
@@ -75,7 +92,7 @@ saveIds(id);
 addProduct(id);
 };
 
-const loadCart = () => {
+const loadCart = async () => {
   if (!localStorage || !localStorage.cartStorage) { 
     cartItems.innerHTML = ''; 
     localStorage.total = 0;
@@ -85,6 +102,7 @@ const loadCart = () => {
   const ids = localStorage.getItem('cartStorage').split(',');
   cartIds = ids;
   ids.forEach((product) => addProduct(product));
+  await totalCartQuantity();
 };
 
 function createProductImageElement(imageSource) {
@@ -96,7 +114,6 @@ function createProductImageElement(imageSource) {
   img.style.backgroundRepeat = 'no-repeat'
   img.className = 'item__image';
   img.style.backgroundImage = `url(${imageSource})`;
-  // img.src = imageSource;
   return img;
 }
 
@@ -106,6 +123,7 @@ emptyCart.addEventListener('click', () => {
   totalPrice.innerHTML = formatter.format(total);
   localStorage.clear();
   localStorage.setItem('lastSearch', lastSearch);
+  totalCartQuantity();
 });
 
 function createCustomElement(element, className, innerText) {
@@ -119,8 +137,7 @@ function createCustomElement(element, className, innerText) {
 }
 
 function createProductItemElement({ id, title, thumbnail, price }) {
-  // itemsList.innerHTML = '';
-  const img = thumbnail.replace(/-I.jpg/g, '-O.jpg')
+  const img = thumbnail.replace('-I.jpg', '-O.jpg')
   const section = document.createElement('section');
   section.className = 'item';
   const imgContainer = document.createElement('div');
@@ -150,19 +167,11 @@ const getProduct = (search) => new Promise((resolve, reject) => {
 });
 
 const generateProductList = async (search) => {
+  itemsList.innerHTML = '<span class="loading">loading...<span/>';
   const products = await getProduct(search);
+  itemsList.innerHTML = '';
+  // itemsList.innerHTML = 'LOADING'
   return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
-};
-
-window.onload = async () => {
-  loadCart();
-  if (!localStorage.lastSearch) {
-    const products = await getProduct();
-    return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
-  } else {
-    lastSearch = localStorage.lastSearch;
-    generateProductList(localStorage.lastSearch);
-  }
 };
 
 searchBar.addEventListener('keyup', async (evt) => {
@@ -193,24 +202,22 @@ searchBtn.addEventListener('click', async () => {
   lastSearch = searchBar.value;
   saveCart();
   generateProductList(searchBar.value);
-  // const search = searchBar.value;
-  // const products = await getProduct(searchBar.value)
-  // console.log(searchBar.value);
-  // return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
 })
-
-// open cart mobile
 
 cartIcon.addEventListener('click',  () => {
   cartIcon.classList.toggle('active')
   cart.classList.toggle('active');
 });
 
-// const shippimentOptions = (itemId) => {
-//   fetch(`https://api.mercadolibre.com/items/${itemId}/shipping_options`)
-//   .then((result) => result.json())
-//   .then((resultJson) => console.log(resultJson))
-//   .catch((err) => err);
-// };
+// update cart items quantity
 
-// shippimentOptions('MLA609927611');
+window.onload = async () => {
+  loadCart();
+  if (!localStorage.lastSearch) {
+    const products = await getProduct();
+    return products.forEach((product) => itemsList.appendChild(createProductItemElement(product)));
+  } else {
+    lastSearch = localStorage.lastSearch;
+    generateProductList(localStorage.lastSearch);
+  }
+};
