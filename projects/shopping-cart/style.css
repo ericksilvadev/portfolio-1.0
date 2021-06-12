@@ -1,23 +1,3 @@
-/* .top-bar {
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: space-around;
-  margin-bottom: 10px;
-  width: 100%;
-  background-color: aqua;
-}
-
-.top-bar .input-name-group {
-  align-items: flex-start;
-  display: flex;
-}
-
-.top-bar .input-terms-group {
-  align-items: flex-start;
-  display: flex;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -93,13 +73,6 @@ body {
   width: 100%;
 }
 
-/* .items {
-  display: flex;
-  flex-basis: 70%;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  justify-content: center;
-} */
 
 .items {
   display: flex;
@@ -269,6 +242,13 @@ span.item__title {
   display: none;
 }
 
+.loading {
+  height: 100px;
+  width: 100px;
+  font-size: 50px;
+  align-self: center;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     overflow: hidden;
@@ -323,7 +303,7 @@ span.item__title {
   
   .cart {
     /* right: -150vw; */
-    width: 0;
+    width: 90vw;
     top: 0;
     height: 100vh;
     /* overflow: hidden; */
@@ -331,7 +311,7 @@ span.item__title {
     /* opacity: 0; */
     padding: 5vh 0px;
     transition: all ease-in-out 1s;
-    right: -100vw;
+    right: -150vw;
   }
   
   .cart.active {
@@ -347,6 +327,14 @@ span.item__title {
     padding-bottom: 2vh;
   }
 
+  .empty-cart {
+    width: 50%;
+  }
+
+  .total-price {
+    width: 50%;
+  }
+
   .cart-icon-container {
     position: fixed;
     display: block;
@@ -354,6 +342,23 @@ span.item__title {
     bottom: 23px;
     font-size: 35px;
     color: rgb(49, 49, 49);
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.473);
+  }
+
+  .items-quantity {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    background-color: tomato;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    font-size: 13px;
   }
 
   .items {
@@ -394,5 +399,14 @@ span.item__title {
 
   .item .item__add {
     font-size: 12px;
+  }
+
+  .loading {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50vh;
+    right: 50%;
   }
 }
