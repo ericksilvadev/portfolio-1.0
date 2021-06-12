@@ -271,8 +271,8 @@ span.item__title {
     width: 0;
     /* opacity: 0; */
     align-self: flex-end;
-    transition: width ease-in-out .7s;
     padding: 15px 0px;
+    transition: all ease-in-out .7s;
   }
 
   .search.active {
@@ -303,14 +303,14 @@ span.item__title {
   
   .cart {
     /* right: -150vw; */
-    width: 90vw;
+    width: 99vw;
     top: 0;
     height: 100vh;
     /* overflow: hidden; */
     position: fixed;
     /* opacity: 0; */
     padding: 5vh 0px;
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out .8s;
     right: -150vw;
   }
   
@@ -371,7 +371,13 @@ span.item__title {
   .item {
     width: 47%;
     min-height: 300px;
+    box-shadow: 1px 1px 8px rgb(209, 209, 209);
+    border-radius: 5px;
     /* max-height: 400px; */
+  }
+
+  .item .item__add {
+    border-radius: 0 0 5px 5px;
   }
 
   /* .item__image {
