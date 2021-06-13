@@ -67,13 +67,28 @@ const equalsBtn = document.querySelector('.equal');
 equalsBtn.addEventListener('click', () => {
   const total = eval(currCount.innerHTML);
   resultContainer.innerHTML = total;
+  if (resultContainer.innerHTML.length > 12 && resultContainer.innerHTML.length < 20) {
+    resultContainer.style.fontSize = '20px'
+  } else if (resultContainer.innerHTML.length > 19){
+    resultContainer.style.fontSize = '15px'
+  } else {
+    resultContainer.style.fontSize = '30px'
+  }
 })
+
+// check last result
+
+const checkLast = () => {
+  if (resultContainer.innerHTML.length === 0) { return }
+  currCount.innerHTML = resultContainer.innerHTML
+};
 
 // sum
 
 const sumBtn = document.querySelector('.plus');
 
 const sum = (number) => {
+  checkLast();
   currCount.innerHTML += ' + ';
 };
 
@@ -84,6 +99,7 @@ sumBtn.addEventListener('click', sum);
 const minusBtn = document.querySelector('.minus');
 
 const sub = (number) => {
+  checkLast();
   currCount.innerHTML += ' - ';
 };
 
@@ -94,6 +110,7 @@ minusBtn.addEventListener('click', sub);
 const timesBtn = document.querySelector('.times');
 
 const mult = (number) => {
+  checkLast();
   currCount.innerHTML += ' * ';
 };
 
@@ -104,6 +121,7 @@ timesBtn.addEventListener('click', mult);
 const divBtn = document.querySelector('.div');
 
 const div = (number) => {
+  checkLast();
   currCount.innerHTML += ' / ';
 };
 
