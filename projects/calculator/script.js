@@ -142,7 +142,23 @@ dotBtn.addEventListener('click', () => {
 // undo
 
 const undoBtn = document.querySelector('.undo');
+let updated = '';
+
+const updateCurrent = (current) => {
+  const update = current.slice(0, -1);
+  return update;
+};
 
 undoBtn.addEventListener('click', () => {
-  currCount.innerHTML = '';
+  const current = currCount.innerHTML.split('');
+  updated = current;
+  if (current.pop() === ' ') {
+    for (let index = 0; index < 2; index++) {
+      updated = updateCurrent(updated);
+      currCount.innerHTML = updated.join('');
+    }
+  } else {
+    updated.slice(0, -1);
+    currCount.innerHTML = updated.join('');
+  }
 });
