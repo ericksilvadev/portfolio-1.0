@@ -14,7 +14,7 @@ body {
 .main {
   background-color: rgb(243, 243, 243);
   width: 250px;
-  height: 510px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@ body {
   width: 250px;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  height: 90px;
+  height: 60px;
   margin: 0 0 20px 0;
 }
 
@@ -99,6 +99,10 @@ body {
   background-color: rgb(231, 231, 231);
   font-weight: 500;
   cursor: pointer;
+}
+
+.key:active {
+  background-color: rgb(189, 189, 189);
 }
 
 .dot-p {
@@ -148,7 +152,21 @@ body.dark {
   background-color: rgb(20, 20, 20);
 }
 
+.key.dark:active {
+  background-color: rgb(36, 36, 36);
+}
+
 .count.dark {
   background-color: rgb(20, 20, 20);
   color: rgb(192, 131, 17);
+}
+
+@media screen and (max-width : 768px) {
+  body {
+    height: auto;
+  }
+
+  .main {
+    margin-top: 55px;
+  }
 }
