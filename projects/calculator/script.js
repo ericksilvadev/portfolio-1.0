@@ -68,11 +68,11 @@ equalsBtn.addEventListener('click', () => {
   const total = eval(currCount.innerHTML);
   resultContainer.innerHTML = total;
   if (resultContainer.innerHTML.length > 12 && resultContainer.innerHTML.length < 20) {
-    resultContainer.style.fontSize = '20px'
+    resultContainer.style.fontSize = '20px';
   } else if (resultContainer.innerHTML.length > 19){
-    resultContainer.style.fontSize = '15px'
+    resultContainer.style.fontSize = '15px';
   } else {
-    resultContainer.style.fontSize = '30px'
+    resultContainer.style.fontSize = '30px';
   }
 })
 
@@ -80,7 +80,7 @@ equalsBtn.addEventListener('click', () => {
 
 const checkLast = () => {
   if (resultContainer.innerHTML.length === 0) { return }
-  currCount.innerHTML = resultContainer.innerHTML
+  currCount.innerHTML = resultContainer.innerHTML;
 };
 
 // sum
@@ -127,7 +127,17 @@ const div = (number) => {
 
 divBtn.addEventListener('click', div);
 
-// percentage
+// dot
+
+const dotBtn = document.querySelector('.dot');
+
+dotBtn.addEventListener('click', () => {
+  if (currCount.innerHTML.length === 0) {
+    currCount.innerHTML += '0.';
+  } else {
+    currCount.innerHTML += '.';
+  }
+});
 
 // undo
 
