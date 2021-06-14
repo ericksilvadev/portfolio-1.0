@@ -66,15 +66,17 @@ numberKeys.forEach((number) => number.addEventListener('click', getNumbers));
 
 // check if last character is number
 
+let pressUndo = false;
 let isLastCharacterNumber = false;
 
 const checkLastCharacter = () => {
   const lastCharacter = calculate.split('').pop();
-  if (lastCharacter !== ' ') { 
+  if (lastCharacter !== ' ' || pressUndo) { 
     isLastCharacterNumber = true;
     return true;
   } else { 
     isLastCharacterNumber = false; 
+    console.log(isLastCharacterNumber);
     return false;
   }
 };
@@ -209,7 +211,7 @@ undoBtn.addEventListener('click', () => {
   const current = currCount.innerHTML.split('');
   updated = current;
   if (current.pop() === ' ') {
-
+    pressUndo = true;
     for (let index = 0; index < 2; index++) {
       updated = updateCurrent(updated);
       currCount.innerHTML = updated.join('');
