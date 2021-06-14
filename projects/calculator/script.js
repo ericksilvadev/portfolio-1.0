@@ -137,7 +137,7 @@ const sum = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += ' + ';
+  calculate += '+';
   currCount.innerHTML += ' + ';
 };
 
@@ -153,7 +153,7 @@ const sub = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += ' - ';
+  calculate += '-';
   currCount.innerHTML += ' - ';
 };
 
@@ -169,7 +169,7 @@ const mult = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += ' * ';
+  calculate += '*';
   currCount.innerHTML += ' x ';
 };
 
@@ -185,7 +185,7 @@ const div = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += ' / ';
+  calculate += '/';
   currCount.innerHTML += ' / ';
 };
 
@@ -224,11 +224,11 @@ undoBtn.addEventListener('click', () => {
   if (currentHtml.pop() === ' ') {
     pressUndo = true;
     for (let index = 0; index < 2; index++) {
-      updatedCount = updateCurrent(updatedCount)
       updatedHtml = updateCurrent(updatedHtml);
       currCount.innerHTML = updatedHtml.join('');
-      calculate = updatedCount.join('');
     }
+    updatedCount = updateCurrent(updatedCount)
+    calculate = updatedCount.join('');
     console.log(calculate);
   } else {
     updatedCount = updateCurrent(updatedCount);
