@@ -54,8 +54,13 @@ let countUpdate = '';
 
 const getNumbers = (evt) => {
   if (!allowNumber) { return; }
+  if (evt.target.id === 'dot') { 
+    calculate += '.';
+    return;
+  }
   const number = Number(evt.target.id);
   calculate += number;
+  console.log(calculate);
   numberLength += number;
   countUpdate += number;
   if (!maxLength(numberLength)) { return; }
@@ -71,7 +76,8 @@ let isLastCharacterNumber = false;
 
 const checkLastCharacter = () => {
   const lastCharacter = calculate.split('').pop();
-  if (lastCharacter !== ' ' || pressUndo) { 
+  if (lastCharacter !== ' ' || pressUndo || lastCharacter !== '.') { 
+    console.log(lastCharacter);
     isLastCharacterNumber = true;
     return true;
   } else { 
@@ -97,6 +103,7 @@ let result = 0;
 const equalsBtn = document.querySelector('.equal');
 
 equalsBtn.addEventListener('click', () => {
+  console.log(calculate);
   const total = eval(calculate);
   if (calculate.length === 0) { return; }
   calculate = '';
