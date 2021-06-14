@@ -15,7 +15,7 @@ let theme = 'light';
 // dark mode
 
 const toggleDarkMode = () => {
-  (theme === 'light' ? theme = 'dark' : theme ='light');
+  (theme === 'light' ? theme = 'dark' : theme = 'light');
   mainContainer.classList.toggle('dark');
   keyboard.classList.toggle('dark');
   light.classList.toggle('dark');
@@ -37,24 +37,56 @@ window.onload = () => {
   else { return };
 }
 
+// limit characters
+
+let numberLength = '';
+
+const maxLength = (currNumber) => {
+  if (currNumber.length < 16) { return true };
+  return false;
+};
+
 // press numbers
 
-let countUpdate = ''
-const numbersArray = [];
+let allowNumber = true;
+let calculate = '';
+let countUpdate = '';
 
 const getNumbers = (evt) => {
+  if (!allowNumber) { return; }
   const number = Number(evt.target.id);
+  calculate += number;
+  numberLength += number;
   countUpdate += number;
+  if (!maxLength(numberLength)) { return; }
   currCount.innerHTML += number;
-  numbersArray.push(number)
-  // console.log(numbersArray);
 };
 
 numberKeys.forEach((number) => number.addEventListener('click', getNumbers));
 
+// check if last character is number
+
+let pressUndo = false;
+let isLastCharacterNumber = false;
+
+const checkLastCharacter = () => {
+  const lastCharacter = calculate.split('').pop();
+  if (lastCharacter !== ' ' || pressUndo) { 
+    isLastCharacterNumber = true;
+    return true;
+  } else { 
+    isLastCharacterNumber = false; 
+    console.log(isLastCharacterNumber);
+    return false;
+  }
+};
+
+
 // clear key
 
 clearKey.addEventListener('click', () => {
+  calculate = '';
+  allowNumber = true;
   currCount.innerHTML = '';
   resultContainer.innerHTML = '';
 });
@@ -65,30 +97,40 @@ let result = 0;
 const equalsBtn = document.querySelector('.equal');
 
 equalsBtn.addEventListener('click', () => {
-  const total = eval(currCount.innerHTML);
+  const total = eval(calculate);
+  if (calculate.length === 0) { return; }
+  calculate = '';
+  numberLength = '';
+  allowNumber = false;
   resultContainer.innerHTML = total;
   if (resultContainer.innerHTML.length > 12 && resultContainer.innerHTML.length < 20) {
     resultContainer.style.fontSize = '20px';
   } else if (resultContainer.innerHTML.length > 19){
-    resultContainer.style.fontSize = '15px';
+    resultContainer.style.fontSize = '16px';
   } else {
     resultContainer.style.fontSize = '35px';
   }
-})
+});
 
 // check last result
 
-// const checkLast = () => {
-//   if (resultContainer.innerHTML.length > 0 ) { return }
-//   currCount.innerHTML = resultContainer.innerHTML;
-// };
+const checkLast = () => {
+  if (calculate != '' ) { return }
+  calculate += resultContainer.innerHTML
+  currCount.innerHTML = resultContainer.innerHTML;
+};
 
 // sum
 
 const sumBtn = document.querySelector('.plus');
 
-const sum = (number) => {
-  // checkLast();
+const sum = () => {
+  checkLastCharacter()
+  if (!isLastCharacterNumber || currCount.innerHTML.length === 0) { return; }
+  checkLast();
+  numberLength = '';
+  allowNumber = true;
+  calculate += '+ ';
   currCount.innerHTML += ' + ';
 };
 
@@ -98,8 +140,13 @@ sumBtn.addEventListener('click', sum);
 
 const minusBtn = document.querySelector('.minus');
 
-const sub = (number) => {
-  // checkLast();
+const sub = () => {
+  checkLastCharacter()
+  if (!isLastCharacterNumber || currCount.innerHTML.length === 0) { return; }
+  checkLast();
+  numberLength = '';
+  allowNumber = true;
+  calculate += '- ';
   currCount.innerHTML += ' - ';
 };
 
@@ -109,9 +156,14 @@ minusBtn.addEventListener('click', sub);
 
 const timesBtn = document.querySelector('.times');
 
-const mult = (number) => {
-  // checkLast();
-  currCount.innerHTML += ' * ';
+const mult = () => {
+  checkLastCharacter()
+  if (!isLastCharacterNumber || currCount.innerHTML.length === 0) { return; }
+  checkLast();
+  numberLength = '';
+  allowNumber = true;
+  calculate += '* ';
+  currCount.innerHTML += ' x ';
 };
 
 timesBtn.addEventListener('click', mult);
@@ -120,8 +172,13 @@ timesBtn.addEventListener('click', mult);
 
 const divBtn = document.querySelector('.div');
 
-const div = (number) => {
-  // checkLast();
+const div = () => {
+  checkLastCharacter()
+  if (!isLastCharacterNumber || currCount.innerHTML.length === 0) { return; }
+  checkLast();
+  numberLength = '';
+  allowNumber = true;
+  calculate += '/ ';
   currCount.innerHTML += ' / ';
 };
 
@@ -150,9 +207,11 @@ const updateCurrent = (current) => {
 };
 
 undoBtn.addEventListener('click', () => {
+  if (!allowNumber) { return; }
   const current = currCount.innerHTML.split('');
   updated = current;
   if (current.pop() === ' ') {
+    pressUndo = true;
     for (let index = 0; index < 2; index++) {
       updated = updateCurrent(updated);
       currCount.innerHTML = updated.join('');
