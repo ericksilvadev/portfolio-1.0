@@ -130,7 +130,7 @@ const sum = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += '+ ';
+  calculate += ' + ';
   currCount.innerHTML += ' + ';
 };
 
@@ -146,7 +146,7 @@ const sub = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += '- ';
+  calculate += ' - ';
   currCount.innerHTML += ' - ';
 };
 
@@ -162,7 +162,7 @@ const mult = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += '* ';
+  calculate += ' * ';
   currCount.innerHTML += ' x ';
 };
 
@@ -178,7 +178,7 @@ const div = () => {
   checkLast();
   numberLength = '';
   allowNumber = true;
-  calculate += '/ ';
+  calculate += ' / ';
   currCount.innerHTML += ' / ';
 };
 
@@ -208,16 +208,26 @@ const updateCurrent = (current) => {
 
 undoBtn.addEventListener('click', () => {
   if (!allowNumber) { return; }
-  const current = currCount.innerHTML.split('');
-  updated = current;
-  if (current.pop() === ' ') {
+  const currentHtml = currCount.innerHTML.split('');
+  let updatedHtml = currentHtml;
+  const currentCount = calculate.split('');
+  let updatedCount = currentCount;
+  calculate = '';
+
+  if (currentHtml.pop() === ' ') {
     pressUndo = true;
     for (let index = 0; index < 2; index++) {
-      updated = updateCurrent(updated);
-      currCount.innerHTML = updated.join('');
+      updatedCount = updateCurrent(updatedCount)
+      updatedHtml = updateCurrent(updatedHtml);
+      currCount.innerHTML = updatedHtml.join('');
+      calculate = updatedCount.join('');
     }
+    console.log(calculate);
   } else {
-    updated.slice(0, -1);
-    currCount.innerHTML = updated.join('');
+    updatedCount = updateCurrent(updatedCount);
+    updatedHtml.slice(0, -1);
+    calculate = updatedCount.join('');
+    console.log(calculate);
+    currCount.innerHTML = updatedHtml.join('');
   }
 });
