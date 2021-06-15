@@ -93,6 +93,7 @@ const checkLastCharacter = () => {
 clearKey.addEventListener('click', () => {
   calculate = '';
   allowNumber = true;
+  numberLength = '';
   currCount.innerHTML = '';
   resultContainer.innerHTML = '';
 });
