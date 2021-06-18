@@ -60,7 +60,6 @@ const getNumbers = (evt) => {
   }
   const number = Number(evt.target.id);
   calculate += number;
-  console.log(calculate);
   numberLength += number;
   countUpdate += number;
   if (!maxLength(numberLength)) { return; }
@@ -76,14 +75,15 @@ let isLastCharacterNumber = false;
 
 const checkLastCharacter = () => {
   const lastCharacter = calculate.split('').pop();
-  if (lastCharacter !== ' ' || pressUndo || lastCharacter !== '.') { 
-    console.log(lastCharacter);
+  const signals = ['+', '-', '*', '/'];
+  const test = signals.some((signal) => signal === lastCharacter);
+
+  if (test) {
+    isLastCharacterNumber = false;
+    return false
+  } else {
     isLastCharacterNumber = true;
     return true;
-  } else { 
-    isLastCharacterNumber = false; 
-    console.log(isLastCharacterNumber);
-    return false;
   }
 };
 
@@ -104,7 +104,6 @@ let result = 0;
 const equalsBtn = document.querySelector('.equal');
 
 equalsBtn.addEventListener('click', () => {
-  console.log(calculate);
   const total = eval(calculate);
   if (calculate.length === 0) { return; }
   calculate = '';
@@ -230,12 +229,10 @@ undoBtn.addEventListener('click', () => {
     }
     updatedCount = updateCurrent(updatedCount)
     calculate = updatedCount.join('');
-    console.log(calculate);
   } else {
     updatedCount = updateCurrent(updatedCount);
     updatedHtml.slice(0, -1);
     calculate = updatedCount.join('');
-    console.log(calculate);
     currCount.innerHTML = updatedHtml.join('');
   }
 });
